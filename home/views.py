@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-# Create your views here.
+# This app is for the sole purpose of showing the home page
 
 def index(request):
     return render(request, 'home/index.html')
