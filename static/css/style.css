@@ -20,6 +20,13 @@ h1 { font-family: 'Sriracha', cursive; }
 
 /* ------------ Navbar ------------ */
 
+nav{
+    height: 60px;
+    z-index: 1;
+}
+
+nav a{ color: #fff !important;}
+
 /* ------------ Buttons ----------- */
 
 /* ------------ Footer ------------ */
