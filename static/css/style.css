@@ -1,5 +1,10 @@
 /* --------- Google Fonts --------- */
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Sriracha&display=swap');
+
+body{ font-family: 'Roboto', sans-serif; }
+h1 { font-family: 'Sriracha', cursive; }
+
 /* --------- Color Palette -------- */
 
 .text-blue{ color: #1F96F4; }
