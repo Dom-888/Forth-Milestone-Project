@@ -2,32 +2,38 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Sriracha&display=swap');
 
-body{ font-family: 'Roboto', sans-serif; }
+body { font-family: 'Roboto', sans-serif; }
 h1 { font-family: 'Sriracha', cursive; }
 
 /* --------- Color Palette -------- */
 
-.text-blue{ color: #1F96F4; }
-.bg-blue{ background-color: #1F96F4; }
+.text-blue { color: #1F96F4; }
+.bg-blue { background-color: #1F96F4; }
 
-.text-gold{ color: #FFD700; }
-.bg-gold{ background-color: #FFD700; }
+.text-gold { color: #FFD700; }
+.bg-gold { background-color: #FFD700; }
 
-.text-lgray{ color: #E5E5E5; }
-.bg-lgray{ background-color: #E5E5E5; }
+.text-lgray { color: #E5E5E5; }
+.bg-lgray { background-color: #E5E5E5; }
 
 /* -------- Bootstrap Grid -------- */
 
 /* ------------ Navbar ------------ */
 
-nav{
+nav {
     height: 60px;
     z-index: 1;
 }
 
-nav a{ color: #fff !important;}
+nav a { color: #fff !important;}
 
-/* ------------ Buttons ----------- */
+/* ----------- Home Page ---------- */
+
+#viewAllGames {
+    color: #fff;
+    font-weight: 500;
+    border-radius: 50px;
+}
 
 /* ------------ Footer ------------ */
 
