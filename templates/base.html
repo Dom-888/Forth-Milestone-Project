@@ -20,7 +20,7 @@
 	<title>The Yellow Dice {% block extra_title %}{% endblock %}</title>
 </head>
 
-<body>
+<body class="bg-lgray">
 
 	<!-- Display toast messages -->
 	{% if messages %}
@@ -29,14 +29,12 @@
 
 	{% include 'includes/navbar.html' %}
 
-	<main>
+	<main class="min-vh-100">
 		{% block content %}
 		{% endblock %}
 	</main>
 
-	<footer class="bg-blue">
-		{% include 'includes/footer.html' %}
-	</footer>
+	{% include 'includes/footer.html' %}
 
 	<!-- Scripts -->
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"

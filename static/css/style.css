@@ -21,12 +21,12 @@ h1 { font-family: 'Sriracha', cursive; }
 
 /* -------- Bootstrap Grid -------- */
 
-/* ----------- All Pages ---------- */
-
-body { background-color: #E5E5E5; }
+/* ------------ Buttons ----------- */
 
 /* Increases the thickness of feather icons */
 .feather { stroke-width: 2.5; }
+
+.btn { color: #fff; }
 
 /* ------------ Navbar ------------ */
 
@@ -54,13 +54,9 @@ nav li {
     margin: 1em 1em 0 !important;    
 }
 
-
-
-
 /* ----------- Home Page ---------- */
 
 #viewAllGames {
-    color: #fff;
     font-weight: 500;
     border-radius: 50px;
 }
@@ -73,6 +69,6 @@ nav li {
 @media (min-width: 992px) { 
 
     nav li {
-        margin: 0 0 0 2em !important; 
+        margin: 0 0 0 1em !important; 
     }
 }
