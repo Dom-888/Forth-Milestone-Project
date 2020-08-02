@@ -8,15 +8,25 @@ h1 { font-family: 'Sriracha', cursive; }
 /* --------- Color Palette -------- */
 
 .text-blue { color: #1F96F4; }
-.bg-blue { background-color: #1F96F4; }
+.bg-blue { background-color: #1F96F4 }
 
 .text-gold { color: #FFD700; }
 .bg-gold { background-color: #FFD700; }
+
+.text-dgray { color: #999; }
+.bg-dgray { background-color: #999; }
 
 .text-lgray { color: #E5E5E5; }
 .bg-lgray { background-color: #E5E5E5; }
 
 /* -------- Bootstrap Grid -------- */
+
+/* ----------- All Pages ---------- */
+
+body { background-color: #E5E5E5; }
+
+/* Increases the thickness of feather icons */
+.feather { stroke-width: 2.5; }
 
 /* ------------ Navbar ------------ */
 
@@ -25,7 +35,27 @@ nav {
     z-index: 1;
 }
 
-nav a { color: #fff !important;}
+nav a { 
+    color: #fff !important;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #FFD700 !important;
+    transition: all 0.4s ease 0s;
+    background-color: transparent !important;
+}
+
+.navbar-toggler {
+    border: solid 2px #8FCBFA !important;
+}
+
+nav li {
+    margin: 1em 1em 0 !important;    
+}
+
+
+
 
 /* ----------- Home Page ---------- */
 
@@ -38,3 +68,11 @@ nav a { color: #fff !important;}
 /* ------------ Footer ------------ */
 
 /* --------- Media Queries -------- */
+
+/* Large devices */
+@media (min-width: 992px) { 
+
+    nav li {
+        margin: 0 0 0 2em !important; 
+    }
+}

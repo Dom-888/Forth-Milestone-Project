@@ -20,7 +20,7 @@
 	<title>The Yellow Dice {% block extra_title %}{% endblock %}</title>
 </head>
 
-<body class="bg-lgray">
+<body>
 
 	<!-- Display toast messages -->
 	{% if messages %}
@@ -30,10 +30,8 @@
 	{% include 'includes/navbar.html' %}
 
 	<main>
-		<div class="container">
-			{% block content %}
-			{% endblock %}
-		</div>
+		{% block content %}
+		{% endblock %}
 	</main>
 
 	<footer class="bg-blue">
