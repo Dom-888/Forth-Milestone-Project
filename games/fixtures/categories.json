@@ -1,7 +1,7 @@
 [
   {
     "pk": 1,
-    "model": "products.category",
+    "model": "games.category",
     "fields": {
       "name": "board_games",
       "display_name": "Board Games"
@@ -9,7 +9,7 @@
   },
   {
     "pk": 2,
-    "model": "products.category",
+    "model": "games.category",
     "fields": {
       "name": "cards",
       "display_name": "Cards"
@@ -17,7 +17,7 @@
   },
   {
     "pk": 3,
-    "model": "products.category",
+    "model": "games.category",
     "fields": {
       "name": "abstract",
       "display_name": "Abstract"
@@ -25,7 +25,7 @@
   },
   {
     "pk": 4,
-    "model": "products.category",
+    "model": "games.category",
     "fields": {
       "name": "mashup",
       "display_name": "Mashup"
