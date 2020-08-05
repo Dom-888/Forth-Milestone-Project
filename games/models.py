@@ -35,7 +35,7 @@ class Includes(models.Model):
 # Rating assigned by registered users to products. It is commented out as the user model does not yet exist
 '''
 class Rating(models.Model):
-    user = models.ForeignKey(User, null=False, blank=False, on_delete=models.CASCADE) # the primary key of the user who assigns the grade
-    game = models.ForeignKey(Game, null=False, blank=False, on_delete=models.CASCADE) # the primary key of the game being evaluated
+    user = models.ForeignKey(User, null=False, blank=False, on_delete=models.CASCADE)
+    game = models.ForeignKey(Game, null=False, blank=False, on_delete=models.CASCADE) 
     grade = models.tinyint() # the grade expressed with a number from 1 to 5
 '''
