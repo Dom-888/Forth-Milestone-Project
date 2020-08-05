@@ -26,10 +26,13 @@ class Game(models.Model):
 
 
 # Items included in the game's box, such cards and dice
-class Includes(models.Model):
+class Included(models.Model):
     game = models.ForeignKey(Game, null=False, blank=False, on_delete=models.CASCADE)
     item = models.CharField(max_length=254)
     quantity = models.IntegerField(default=1)
+
+    def __str__(self):
+        return self.item
 
 
 # Rating assigned by registered users to products. It is commented out as the user model does not yet exist
@@ -38,4 +41,7 @@ class Rating(models.Model):
     user = models.ForeignKey(User, null=False, blank=False, on_delete=models.CASCADE)
     game = models.ForeignKey(Game, null=False, blank=False, on_delete=models.CASCADE) 
     grade = models.tinyint() # the grade expressed with a number from 1 to 5
+
+    def __str__(self):
+        return self.grade
 '''

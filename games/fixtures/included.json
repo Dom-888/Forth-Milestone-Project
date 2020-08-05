@@ -1,0 +1,45 @@
+[
+  {
+    "pk": 1,
+    "model": "games.included",
+    "fields": {
+      "game": 1,
+      "item": "Gameboard",      "quantity": 1   
+    }
+  },
+  {
+    "pk": 2,
+    "model": "games.included",
+    "fields": {
+      "game": 1,
+      "item": "Dice",
+      "quantity": 5	   
+    }
+  },
+  {
+    "pk": 3,
+    "model": "games.included",
+    "fields": {
+      "game": 2,
+      "item": "Gameboard",
+      "quantity": 1	   
+    }
+  },
+  {
+    "pk": 4,
+    "model": "games.included",
+    "fields": {
+      "game": 2,
+      "item": "Dice",
+      "quantity": 2
+    }
+  },  {
+    "pk": 5,
+    "model": "games.included",
+    "fields": {
+      "game": 3,
+      "item": "Gameboard",
+      "quantity": 1	   
+    }
+  }
+]
