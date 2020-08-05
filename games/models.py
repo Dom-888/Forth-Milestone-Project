@@ -2,6 +2,10 @@ from django.db import models
 
 
 class Category(models.Model):
+
+    class Meta:
+	    verbose_name_plural = 'Categories'
+
     name = models.CharField(max_length=254)
     display_name = models.CharField(max_length=254, null=True, blank=True)
 
@@ -27,6 +31,10 @@ class Game(models.Model):
 
 # Items included in the game's box, such cards and dice
 class Included(models.Model):
+
+    class Meta:
+	    verbose_name_plural = 'Included'
+
     game = models.ForeignKey(Game, null=False, blank=False, on_delete=models.CASCADE)
     item = models.CharField(max_length=254)
     quantity = models.IntegerField(default=1)
