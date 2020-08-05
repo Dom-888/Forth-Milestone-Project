@@ -61,6 +61,19 @@ nav li {
     border-radius: 50px;
 }
 
+/* ---------- Games Page ---------- */
+
+.card-body {
+    display: flex;
+}
+
+.card-body p{
+    text-align: center;
+    width: 50%;
+}
+
+/* --------- Details Page --------- */
+
 /* ------------ Footer ------------ */
 
 /* --------- Media Queries -------- */

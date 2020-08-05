@@ -3,8 +3,27 @@
 
 {% block content %}
 <div class="container">
-    <div class="row">
-        {{ games }}
-    </div>
+	<div class="row justify-content-center">
+
+		<!-- Iterare through the games table and display each row of them inside a bootstrap card -->
+		{% for game in games %}
+		<div class="col col-12 col-sm-6 col-lg-4">
+			<section class="game card">
+				<div class="card-header">
+					<a href="">
+						<img class="img-fluid" src="{{ game.image.url }}" alt="{{ game.name }}">
+                    </a>
+					<p class="card-title text-center">{{ game.name }}</p>
+				</div>
+				<div class="card-body">
+					<p>⭐⭐⭐⭐⭐</p>
+					<p class="text-blue">€ {{ game.price }}</p>
+				</div>
+			</section>
+		</div>
+		{% endfor %}
+
+		{{ games }}
+	</div>
 </div>
 {% endblock %}
