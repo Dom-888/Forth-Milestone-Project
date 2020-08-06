@@ -10,9 +10,15 @@
 		<div class="col col-12 col-sm-6 col-lg-4">
 			<section class="game card">
 				<div class="card-header">
+                    {% if game.image %}
 					<a href="">
 						<img class="img-fluid" src="{{ game.image.url }}" alt="{{ game.name }}">
                     </a>
+                    {% else %}
+					<a href="">
+						<img class="img-fluid" src="/media/misc/no_image.jpg" alt="{{ game.name }}">
+                    </a>                   
+                    {% endif %}
 					<p class="card-title text-center">{{ game.name }}</p>
 				</div>
 				<div class="card-body">
