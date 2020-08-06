@@ -7,15 +7,13 @@
 
 		<!-- Iterare through the games table and display each row inside a bootstrap card -->
 		{% for game in games %}
-		<div class="col col-12 col-sm-6 col-lg-4">
+		<div class="col col-12 col-sm-6 col-lg-4 my-3">
 			<section class="game card">
 				<div class="card-header">
                     {% if game.image %}
-					<a href="">
+					<a href="{% url 'game_details' game.pk %}">
 						<img class="img-fluid" src="{{ game.image.url }}" alt="{{ game.name }}">
-                    </a>
                     {% else %}
-					<a href="">
 						<img class="img-fluid" src="/media/misc/no_image.jpg" alt="{{ game.name }}">
                     </a>                   
                     {% endif %}

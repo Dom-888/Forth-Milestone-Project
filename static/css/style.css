@@ -67,12 +67,20 @@ nav li {
     display: flex;
 }
 
-.card-body p{
+.card-body>p{
     text-align: center;
     width: 50%;
 }
 
 /* --------- Details Page --------- */
+
+.details-card {
+    display: flex;
+}
+
+.details-card>div{
+    width: 50%;
+}
 
 /* ------------ Footer ------------ */
 
