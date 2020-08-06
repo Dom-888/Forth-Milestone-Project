@@ -51,5 +51,5 @@ class Rating(models.Model):
     grade = models.tinyint() # the grade expressed with a number from 1 to 5
 
     def __str__(self):
-        return self.grade
+        return self.grade # Probably this is not going to work as grade is not a string
 '''

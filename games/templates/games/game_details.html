@@ -19,7 +19,9 @@
 					<p>{{ game.description}}</p>
 					<h3 class="text-center">Includes</h3>
 
-					<div class=""> {{ included }}</div>
+                    {% for i in included %}
+                        <p> {{ i.quantity }} X {{ i.item }} </p>
+                    {% endfor %}
 
 					<div class="card-body">
 						<p>⭐⭐⭐⭐⭐</p>

@@ -18,12 +18,12 @@ def game_details(request, game_pk):
 
     game = get_object_or_404(Game, pk=game_pk)
 
-    # I need a way to select only the icluded instance where included.game = game.pk
-    included = Included.objects.all()
+    # Select the instance of included whose foreign key is the same as the selected game instance
+    included = Included.objects.filter(game=game_pk)
 
     context = {
         'game': game,
-        'included': included
+        'included': included,
     }
 
     return render(request, 'games/game_details.html', context)
