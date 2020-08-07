@@ -5,39 +5,43 @@
 
 <div class="container">
 	<h1 class="text-center">{{ game.name }}</h1>
-	<div class="row">
-		<div class="col">
+	<div class="row bg-white">
+
+		<!-- Game Image -->
+		<div class="col-12 col-sm-6">
 			<div class="details-card">
 				{% if game.image %}
 				<img class="img-fluid" src="{{ game.image.url }}" alt="{{ game.name }}">
                 {% else %}
 				<img class="img-fluid" src="/media/misc/no_image.jpg" alt="{{ game.name }}">
                 {% endif %}
-
-				<div class="bg-white">
-					<h3 class="text-center">Features</h3>
-					<p>{{ game.description}}</p>
-					<h3 class="text-center">Includes</h3>
-
-                    {% for i in included %}
-                        <p> {{ i.quantity }} X {{ i.item }} </p>
-                    {% endfor %}
-
-					<div class="card-body">
-						<p>⭐⭐⭐⭐⭐</p>
-						<p class="text-blue">€ {{ game.price }}</p>
-					</div>
-
-				</div>
 			</div>
 		</div>
-	</div>
-	<hr>
-	<h1 class="text-center">Similar Games</h1>
-	<div class="row">
+
+        <!-- Game Details -->
+		<div class="col-12 col-sm-6">
+            <h3 class="text-center">Features</h3>
+            <p>{{ game.description}}</p>
+            <h3 class="text-center">Includes</h3>
+
+            {% for i in included %}
+            <p> {{ i.quantity }} X {{ i.item }} </p>
+            {% endfor %}
+
+            <div class="card-body">
+                <p>⭐⭐⭐⭐⭐</p>
+                <p class="text-blue">€ {{ game.price }}</p>
+            </div>
+		</div>
 
 	</div>
+
+    <hr>
+    <h1 class="text-center">Similar Games</h1>
+    <div class="row">
+
+    </div>
 
 </div>
 
-{% endblock %}
+	{% endblock %}
