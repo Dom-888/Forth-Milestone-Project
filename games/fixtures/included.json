@@ -4,7 +4,8 @@
     "model": "games.included",
     "fields": {
       "game": 1,
-      "item": "Gameboard",      "quantity": 1   
+      "item": "Gameboard",
+      "quantity": 1
     }
   },
   {
@@ -13,33 +14,970 @@
     "fields": {
       "game": 1,
       "item": "Dice",
-      "quantity": 5	   
+      "quantity": 5
     }
   },
   {
     "pk": 3,
     "model": "games.included",
     "fields": {
-      "game": 2,
-      "item": "Gameboard",
-      "quantity": 1	   
+      "game": 1,
+      "item": "Armies with 40 Infantry, 12 Cavalry, and 8 Artillery each",
+      "quantity": 5
     }
   },
   {
     "pk": 4,
     "model": "games.included",
     "fields": {
+      "game": 1,
+      "item": "Dice",
+      "quantity": 5
+    }
+  },
+  {
+    "pk": 5,
+    "model": "games.included",
+    "fields": {
+      "game": 1,
+      "item": "Decks of Cards",
+      "quantity": 2
+    }
+  },
+  {
+    "pk": 6,
+    "model": "games.included",
+    "fields": {
+      "game": 1,
+      "item": "Game Guide",
+      "quantity": 1
+    }
+  },
+  {
+    "pk": 7,
+    "model": "games.included",
+    "fields": {
+      "game": 2,
+      "item": "Gameboard",
+      "quantity": 1
+    }
+  },
+  {
+    "pk": 8,
+    "model": "games.included",
+    "fields": {
       "game": 2,
       "item": "Dice",
       "quantity": 2
     }
-  },  {
-    "pk": 5,
+  },
+  {
+    "pk": 9,
+    "model": "games.included",
+    "fields": {
+      "game": 2,
+      "item": "Tokens",
+      "quantity": 8
+    }
+  },
+  {
+    "pk": 10,
+    "model": "games.included",
+    "fields": {
+      "game": 2,
+      "item": "Title Deed cards",
+      "quantity": 28
+    }
+  },
+  {
+    "pk": 11,
+    "model": "games.included",
+    "fields": {
+      "game": 2,
+      "item": "Chance cards",
+      "quantity": 16
+    }
+  },
+  {
+    "pk": 12,
+    "model": "games.included",
+    "fields": {
+      "game": 2,
+      "item": "Community Chest cards",
+      "quantity": 16
+    }
+  },
+  {
+    "pk": 13,
+    "model": "games.included",
+    "fields": {
+      "game": 2,
+      "item": "Money Pack",
+      "quantity": 1
+    }
+  },
+  {
+    "pk": 14,
+    "model": "games.included",
+    "fields": {
+      "game": 2,
+      "item": "Houses",
+      "quantity": 32
+    }
+  },
+  {
+    "pk": 15,
+    "model": "games.included",
+    "fields": {
+      "game": 2,
+      "item": "Hotels",
+      "quantity": 12
+    }
+  },
+  {
+    "pk": 16,
+    "model": "games.included",
+    "fields": {
+      "game": 2,
+      "item": "Game Manual",
+      "quantity": 1
+    }
+  },
+  {
+    "pk": 17,
     "model": "games.included",
     "fields": {
       "game": 3,
-      "item": "Gameboard",
-      "quantity": 1	   
+      "item": "Game Board",
+      "quantity": 1
+    }
+  },
+  {
+    "pk": 18,
+    "model": "games.included",
+    "fields": {
+      "game": 3,
+      "item": "Character Tokens",
+      "quantity": 6
+    }
+  },
+  {
+    "pk": 19,
+    "model": "games.included",
+    "fields": {
+      "game": 3,
+      "item": "Miniature Weapons",
+      "quantity": 6
+    }
+  },
+  {
+    "pk": 20,
+    "model": "games.included",
+    "fields": {
+      "game": 3,
+      "item": "Character Cards",
+      "quantity": 6
+    }
+  },
+  {
+    "pk": 21,
+    "model": "games.included",
+    "fields": {
+      "game": 3,
+      "item": "Weapon Cards",
+      "quantity": 6
+    }
+  },
+  {
+    "pk": 22,
+    "model": "games.included",
+    "fields": {
+      "game": 3,
+      "item": "Room Cards",
+      "quantity": 9
+    }
+  },
+  {
+    "pk": 23,
+    "model": "games.included",
+    "fields": {
+      "game": 3,
+      "item": "Clue Cards",
+      "quantity": 29
+    }
+  },
+  {
+    "pk": 24,
+    "model": "games.included",
+    "fields": {
+      "game": 3,
+      "item": "Game Guide",
+      "quantity": 1
+    }
+  },
+  {
+    "pk": 25,
+    "model": "games.included",
+    "fields": {
+      "game": 4,
+      "item": "Game Board",
+      "quantity": 1
+    }
+  },
+  {
+    "pk": 26,
+    "model": "games.included",
+    "fields": {
+      "game": 4,
+      "item": "Letter Tiles",
+      "quantity": 100
+    }
+  },
+  {
+    "pk": 27,
+    "model": "games.included",
+    "fields": {
+      "game": 4,
+      "item": "Racks",
+      "quantity": 4
+    }
+  },
+  {
+    "pk": 28,
+    "model": "games.included",
+    "fields": {
+      "game": 4,
+      "item": "Game Manual",
+      "quantity": 1
+    }
+  },
+  {
+    "pk": 29,
+    "model": "games.included",
+    "fields": {
+      "game": 5,
+      "item": "Game Board",
+      "quantity": 1
+    }
+  },
+  {
+    "pk": 30,
+    "model": "games.included",
+    "fields": {
+      "game": 5,
+      "item": "Role Cards",
+      "quantity": 7
+    }
+  },
+  {
+    "pk": 31,
+    "model": "games.included",
+    "fields": {
+      "game": 5,
+      "item": "Player Cards",
+      "quantity": 59
+    }
+  },
+  {
+    "pk": 32,
+    "model": "games.included",
+    "fields": {
+      "game": 5,
+      "item": "Inction Cards",
+      "quantity": 48
+    }
+  },
+  {
+    "pk": 33,
+    "model": "games.included",
+    "fields": {
+      "game": 5,
+      "item": "Disease Cubes",
+      "quantity": 96
+    }
+  },
+  {
+    "pk": 34,
+    "model": "games.included",
+    "fields": {
+      "game": 5,
+      "item": "Cure Markers",
+      "quantity": 4
+    }
+  },
+  {
+    "pk": 35,
+    "model": "games.included",
+    "fields": {
+      "game": 5,
+      "item": "Research Stations",
+      "quantity": 6
+    }
+  },
+  {
+    "pk": 36,
+    "model": "games.included",
+    "fields": {
+      "game": 5,
+      "item": "Game Manual",
+      "quantity": 1
+    }
+  },
+  {
+    "pk": 37,
+    "model": "games.included",
+    "fields": {
+      "game": 6,
+      "item": "Board Map",
+      "quantity": 1
+    }
+  },
+  {
+    "pk": 38,
+    "model": "games.included",
+    "fields": {
+      "game": 6,
+      "item": "Colored Train Cars",
+      "quantity": 225
+    }
+  },
+  {
+    "pk": 39,
+    "model": "games.included",
+    "fields": {
+      "game": 6,
+      "item": "Illustrated Cards",
+      "quantity": 144
+    }
+  },
+  {
+    "pk": 40,
+    "model": "games.included",
+    "fields": {
+      "game": 6,
+      "item": "Wooden Scoring Markers",
+      "quantity": 5
+    }
+  },
+  {
+    "pk": 41,
+    "model": "games.included",
+    "fields": {
+      "game": 6,
+      "item": "Rule Booklet",
+      "quantity": 1
+    }
+  },
+  {
+    "pk": 42,
+    "model": "games.included",
+    "fields": {
+      "game": 7,
+      "item": "Terrain Hexes (Tiles)",
+      "quantity": 19
+    }
+  },
+  {
+    "pk": 43,
+    "model": "games.included",
+    "fields": {
+      "game": 7,
+      "item": "Circular Number Tokens (Chits)",
+      "quantity": 18
+    }
+  },
+  {
+    "pk": 44,
+    "model": "games.included",
+    "fields": {
+      "game": 7,
+      "item": "Sea Frame Pieces",
+      "quantity": 6
+    }
+  },
+  {
+    "pk": 45,
+    "model": "games.included",
+    "fields": {
+      "game": 7,
+      "item": "Resource Cards (19 of Each Resource: Ore, Grain, Lumber, Wool, Brick)",
+      "quantity": 95
+    }
+  },
+  {
+    "pk": 46,
+    "model": "games.included",
+    "fields": {
+      "game": 7,
+      "item": "Development Cards (14 Knight/Soldier Cards, 6 Progress Cards, 5 Victory Point Cards)",
+      "quantity": 25
+    }
+  },
+  {
+    "pk": 47,
+    "model": "games.included",
+    "fields": {
+      "game": 7,
+      "item": "Special Cards: Longest Road & Largest Army",
+      "quantity": 2
+    }
+  },
+  {
+    "pk": 48,
+    "model": "games.included",
+    "fields": {
+      "game": 7,
+      "item": "Cities (4 of Each Color Shaped like Churches)",
+      "quantity": 16
+    }
+  },
+  {
+    "pk": 49,
+    "model": "games.included",
+    "fields": {
+      "game": 7,
+      "item": "Settlements (5 of Each Color Shaped like Houses)",
+      "quantity": 20
+    }
+  },
+  {
+    "pk": 50,
+    "model": "games.included",
+    "fields": {
+      "game": 7,
+      "item": "Roads (15 of Each Color Shaped like Bars)",
+      "quantity": 60
+    }
+  },
+  {
+    "pk": 51,
+    "model": "games.included",
+    "fields": {
+      "game": 7,
+      "item": "Dice (1 Yellow, 1 Red)",
+      "quantity": 2
+    }
+  },
+  {
+    "pk": 52,
+    "model": "games.included",
+    "fields": {
+      "game": 7,
+      "item": "Games Rules",
+      "quantity": 1
+    }
+  },
+  {
+    "pk": 53,
+    "model": "games.included",
+    "fields": {
+      "game": 7,
+      "item": "Almanac Booklet",
+      "quantity": 1
+    }
+  },
+  {
+    "pk": 54,
+    "model": "games.included",
+    "fields": {
+      "game": 8,
+      "item": "Cards",
+      "quantity": 108
+    }
+  },
+  {
+    "pk": 55,
+    "model": "games.included",
+    "fields": {
+      "game": 8,
+      "item": "Game Manual",
+      "quantity": 1
+    }
+  },
+  {
+    "pk": 56,
+    "model": "games.included",
+    "fields": {
+      "game": 9,
+      "item": "White Cards",
+      "quantity": 500
+    }
+  },
+  {
+    "pk": 57,
+    "model": "games.included",
+    "fields": {
+      "game": 9,
+      "item": "Black Cards",
+      "quantity": 100
+    }
+  },
+  {
+    "pk": 58,
+    "model": "games.included",
+    "fields": {
+      "game": 9,
+      "item": "Game Manual",
+      "quantity": 1
+    }
+  },
+  {
+    "pk": 59,
+    "model": "games.included",
+    "fields": {
+      "game": 10,
+      "item": "Cards",
+      "quantity": 56
+    }
+  },
+  {
+    "pk": 60,
+    "model": "games.included",
+    "fields": {
+      "game": 10,
+      "item": "Game Manual",
+      "quantity": 1
+    }
+  },
+  {
+    "pk": 61,
+    "model": "games.included",
+    "fields": {
+      "game": 11,
+      "item": "Cards",
+      "quantity": 168
+    }
+  },
+  {
+    "pk": 62,
+    "model": "games.included",
+    "fields": {
+      "game": 11,
+      "item": "Unique six-sided die",
+      "quantity": 1
+    }
+  },
+  {
+    "pk": 63,
+    "model": "games.included",
+    "fields": {
+      "game": 11,
+      "item": "Game Manual",
+      "quantity": 1
+    }
+  },
+  {
+    "pk": 64,
+    "model": "games.included",
+    "fields": {
+      "game": 12,
+      "item": "Cards",
+      "quantity": 84
+    }
+  },
+  {
+    "pk": 65,
+    "model": "games.included",
+    "fields": {
+      "game": 12,
+      "item": "Game Manual",
+      "quantity": 1
+    }
+  },
+  {
+    "pk": 66,
+    "model": "games.included",
+    "fields": {
+      "game": 13,
+      "item": "Chessboard",
+      "quantity": 1
+    }
+  },
+  {
+    "pk": 67,
+    "model": "games.included",
+    "fields": {
+      "game": 13,
+      "item": "Chess Pieces",
+      "quantity": 32
+    }
+  },
+  {
+    "pk": 68,
+    "model": "games.included",
+    "fields": {
+      "game": 13,
+      "item": "Draughts",
+      "quantity": 24
+    }
+  },
+  {
+    "pk": 69,
+    "model": "games.included",
+    "fields": {
+      "game": 13,
+      "item": "Rule Booklet",
+      "quantity": 1
+    }
+  },
+  {
+    "pk": 70,
+    "model": "games.included",
+    "fields": {
+      "game": 14,
+      "item": "Magnetic Case",
+      "quantity": 1
+    }
+  },
+  {
+    "pk": 71,
+    "model": "games.included",
+    "fields": {
+      "game": 14,
+      "item": "Game pieces",
+      "quantity": 30
+    }
+  },
+  {
+    "pk": 72,
+    "model": "games.included",
+    "fields": {
+      "game": 14,
+      "item": "Dice",
+      "quantity": 4
+    }
+  },
+  {
+    "pk": 73,
+    "model": "games.included",
+    "fields": {
+      "game": 14,
+      "item": "Doubling Cube",
+      "quantity": 1
+    }
+  },
+  {
+    "pk": 74,
+    "model": "games.included",
+    "fields": {
+      "game": 14,
+      "item": "Rule Booklet",
+      "quantity": 1
+    }
+  },
+  {
+    "pk": 75,
+    "model": "games.included",
+    "fields": {
+      "game": 15,
+      "item": "Roll-up Playmat",
+      "quantity": 1
+    }
+  },
+  {
+    "pk": 76,
+    "model": "games.included",
+    "fields": {
+      "game": 15,
+      "item": "Master Pawns",
+      "quantity": 2
+    }
+  },
+  {
+    "pk": 77,
+    "model": "games.included",
+    "fields": {
+      "game": 15,
+      "item": "Student Pawns",
+      "quantity": 8
+    }
+  },
+  {
+    "pk": 78,
+    "model": "games.included",
+    "fields": {
+      "game": 15,
+      "item": "Move Cards",
+      "quantity": 16
+    }
+  },
+  {
+    "pk": 79,
+    "model": "games.included",
+    "fields": {
+      "game": 15,
+      "item": "Rulebook",
+      "quantity": 1
+    }
+  },
+  {
+    "pk": 80,
+    "model": "games.included",
+    "fields": {
+      "game": 16,
+      "item": "Tactile Game Pieces",
+      "quantity": 22
+    }
+  },
+  {
+    "pk": 81,
+    "model": "games.included",
+    "fields": {
+      "game": 16,
+      "item": "Travel Bag",
+      "quantity": 1
+    }
+  },
+  {
+    "pk": 82,
+    "model": "games.included",
+    "fields": {
+      "game": 16,
+      "item": "Rulebook",
+      "quantity": 1
+    }
+  },
+  {
+    "pk": 83,
+    "model": "games.included",
+    "fields": {
+      "game": 17,
+      "item": "Reversible Disks",
+      "quantity": 64
+    }
+  },
+  {
+    "pk": 84,
+    "model": "games.included",
+    "fields": {
+      "game": 17,
+      "item": "Playing Board",
+      "quantity": 1
+    }
+  },
+  {
+    "pk": 85,
+    "model": "games.included",
+    "fields": {
+      "game": 17,
+      "item": "Rulebook",
+      "quantity": 1
+    }
+  },
+  {
+    "pk": 86,
+    "model": "games.included",
+    "fields": {
+      "game": 18,
+      "item": "Seats of Power represent noble Houses",
+      "quantity": 7
+    }
+  },
+  {
+    "pk": 87,
+    "model": "games.included",
+    "fields": {
+      "game": 18,
+      "item": "Player Boards represent noble Houses",
+      "quantity": 7
+    }
+  },
+  {
+    "pk": 88,
+    "model": "games.included",
+    "fields": {
+      "game": 18,
+      "item": "Cards",
+      "quantity": 187
+    }
+  },
+  {
+    "pk": 89,
+    "model": "games.included",
+    "fields": {
+      "game": 18,
+      "item": "Special Unit Tokens",
+      "quantity": 63
+    }
+  },
+  {
+    "pk": 90,
+    "model": "games.included",
+    "fields": {
+      "game": 18,
+      "item": "Gold Dragon Coins",
+      "quantity": 75
+    }
+  },
+  {
+    "pk": 91,
+    "model": "games.included",
+    "fields": {
+      "game": 18,
+      "item": "Dice",
+      "quantity": 9
+    }
+  },
+  {
+    "pk": 92,
+    "model": "games.included",
+    "fields": {
+      "game": 18,
+      "item": "Instructions Booklet",
+      "quantity": 1
+    }
+  },
+  {
+    "pk": 93,
+    "model": "games.included",
+    "fields": {
+      "game": 19,
+      "item": "Game Board",
+      "quantity": 1
+    }
+  },
+  {
+    "pk": 94,
+    "model": "games.included",
+    "fields": {
+      "game": 19,
+      "item": "Dice",
+      "quantity": 2
+    }
+  },
+  {
+    "pk": 95,
+    "model": "games.included",
+    "fields": {
+      "game": 19,
+      "item": "HP Chips",
+      "quantity": 110
+    }
+  },
+  {
+    "pk": 96,
+    "model": "games.included",
+    "fields": {
+      "game": 19,
+      "item": "Fortnite Outfits With Pawn Stands",
+      "quantity": 27
+    }
+  },
+  {
+    "pk": 97,
+    "model": "games.included",
+    "fields": {
+      "game": 19,
+      "item": "Loot Chest Items",
+      "quantity": 16
+    }
+  },
+  {
+    "pk": 98,
+    "model": "games.included",
+    "fields": {
+      "game": 19,
+      "item": "Fortnite Location Cards",
+      "quantity": 16
+    }
+  },
+  {
+    "pk": 99,
+    "model": "games.included",
+    "fields": {
+      "game": 19,
+      "item": "Storm Cards",
+      "quantity": 15
+    }
+  },
+  {
+    "pk": 100,
+    "model": "games.included",
+    "fields": {
+      "game": 19,
+      "item": "Wall Cards",
+      "quantity": 8
+    }
+  },
+  {
+    "pk": 101,
+    "model": "games.included",
+    "fields": {
+      "game": 19,
+      "item": "Instructions Booklet",
+      "quantity": 1
+    }
+  },
+  {
+    "pk": 102,
+    "model": "games.included",
+    "fields": {
+      "game": 20,
+      "item": "Custom Game Board",
+      "quantity": 1
+    }
+  },
+  {
+    "pk": 103,
+    "model": "games.included",
+    "fields": {
+      "game": 20,
+      "item": "Dice",
+      "quantity": 2
+    }
+  },
+  {
+    "pk": 104,
+    "model": "games.included",
+    "fields": {
+      "game": 20,
+      "item": "Custom Pewter Weapons",
+      "quantity": 9
+    }
+  },
+  {
+    "pk": 105,
+    "model": "games.included",
+    "fields": {
+      "game": 20,
+      "item": "Suspect Movers",
+      "quantity": 6
+    }
+  },
+  {
+    "pk": 106,
+    "model": "games.included",
+    "fields": {
+      "game": 20,
+      "item": "Deck of Personality Cards",
+      "quantity": 1
+    }
+  },
+  {
+    "pk": 107,
+    "model": "games.included",
+    "fields": {
+      "game": 20,
+      "item": "Deck of Rumor Cards",
+      "quantity": 1
+    }
+  },
+  {
+    "pk": 108,
+    "model": "games.included",
+    "fields": {
+      "game": 20,
+      "item": "Custom Score Pad",
+      "quantity": 1
+    }
+  },
+  {
+    "pk": 109,
+    "model": "games.included",
+    "fields": {
+      "game": 20,
+      "item": "Instructions Booklet",
+      "quantity": 1
     }
   }
 ]
