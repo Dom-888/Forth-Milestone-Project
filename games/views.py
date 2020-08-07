@@ -51,12 +51,16 @@ def game_details(request, game_pk):
 
     game = get_object_or_404(Game, pk=game_pk)
 
-    # Select the instance of included whose foreign key is the same as the selected game instance
+    # All the other games in the same category
+    games = Game.objects.filter(category=game.category).exclude(pk = game_pk)
+    
+    # The instance of Included whose foreign key is the same as the selected Game instance
     included = Included.objects.filter(game=game_pk)
 
     context = {
         'game': game,
         'included': included,
+        'games': games
     }
 
     return render(request, 'games/game_details.html', context)
