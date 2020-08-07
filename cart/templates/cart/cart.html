@@ -8,7 +8,9 @@
     <h1 class="logo-font mb-4">Shopping Cart</h2>
 
 	{% if cart_items %}
-	<div class="table-responsive rounded"></div>
+	<div class="table-responsive rounded">
+        {{ cart_items }}
+    </div>
 	{% else %}
 	<p class="lead mb-5">Your cart is empty, sad and lonely :(</p>
     <a href ="{% url 'games'%}" type="button" id="viewAllGames" class="btn btn-success btn-lg px-4">View All Games</a>
