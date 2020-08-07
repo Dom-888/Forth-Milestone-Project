@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     # Site-specifics
     'home',
     'games',
+    'cart',
 ]
 
 MIDDLEWARE = [

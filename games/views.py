@@ -31,7 +31,7 @@ def all_games(request):
             for i in items:
                 print(i.game)
 
-            # Apply the search query to the Games model (name and description fields, plus the items of the preovius search)
+            # Apply the search query to the Games model (name and description fields, plus the items of the previous search)
             g_queries = Q(name__icontains=query) | Q(description__icontains=query) | Q(name__icontains=i.game) 
             games = games.filter(g_queries)
 
