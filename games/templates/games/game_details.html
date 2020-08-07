@@ -16,32 +16,53 @@
 				<img class="img-fluid" src="/media/misc/no_image.jpg" alt="{{ game.name }}">
                 {% endif %}
 			</div>
+			</div>
+
+			<!-- Game Features -->
+			<div class="col-12 col-sm-6">
+				<h3 class="text-center">Features</h3>
+				<p>{{ game.description}}</p>
+				<h3 class="text-center">Includes</h3>
+
+				{% for i in included %}
+				<p> {{ i.quantity }} X {{ i.item }} </p>
+				{% endfor %}
+
+				<div class="card-body">
+					<p>⭐⭐⭐⭐⭐</p>
+					<p class="text-blue">€ {{ game.price }}</p>
+				</div>
+
+				<!-- Add-to-Cart Section -->
+				<form class="form" action="{% url 'add_to_cart' game.pk %}" method="POST">
+					{% csrf_token %}
+
+					<p class="mt-3"><strong>Quantity:</strong></p>
+					<div class="form-group w-50">
+						<div class="input-group">
+							<input class="form-control qty_input" type="number" name="quantity" value="1" min="1" max="99" data-item_id="{{ game.pk }}" id="id_qty_{{ game.pk }}">
+						</div>
+
+						<input type="submit" class="btn btn-success btn-lg px-4" value="Add to Cart">
+
+                        <!-- # Redirect the user to the same page after the item is added to the shopping cart -->
+						<input type="hidden" name="redirect_url" value="{{ request.path }}">
+					</div>
+
+				</form>
+
+
+
+			</div>
+
 		</div>
 
-        <!-- Game Details -->
-		<div class="col-12 col-sm-6">
-            <h3 class="text-center">Features</h3>
-            <p>{{ game.description}}</p>
-            <h3 class="text-center">Includes</h3>
+		<hr>
+		<h1 class="text-center">Similar Games</h1>
+		<div class="row">
 
-            {% for i in included %}
-            <p> {{ i.quantity }} X {{ i.item }} </p>
-            {% endfor %}
-
-            <div class="card-body">
-                <p>⭐⭐⭐⭐⭐</p>
-                <p class="text-blue">€ {{ game.price }}</p>
-            </div>
 		</div>
 
 	</div>
-
-    <hr>
-    <h1 class="text-center">Similar Games</h1>
-    <div class="row">
-
-    </div>
-
-</div>
 
 	{% endblock %}

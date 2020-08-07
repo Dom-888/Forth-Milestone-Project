@@ -30,7 +30,7 @@ def all_games(request):
 
             # Search in the item field of the Included model
             i_queries = Q(item__icontains=query)
-            included = included.filter(i_queries) # Dice here
+            included = included.filter(i_queries) 
             
             # Extend the search in the game model with the results of the search in the Included model
             for i in included:
