@@ -24,15 +24,18 @@ def all_games(request):
             if not query:
                 messages.error(request, "Please enter one or more words to search for")
                 return redirect(reverse('games'))
+            
+            # Search in the name and description fields of the Game model
+            g_queries = Q(name__icontains=query) | Q(description__icontains=query)
 
-            # Apply the search query to the Included model (item field)
+            # Search in the item field of the Included model
             i_queries = Q(item__icontains=query)
-            items = included.filter(i_queries)
-            for i in items:
-                print(i.game)
+            included = included.filter(i_queries) # Dice here
+            
+            # Extend the search in the game model with the results of the search in the Included model
+            for i in included:
+                g_queries = g_queries | Q(name__icontains=i.game.name)
 
-            # Apply the search query to the Games model (name and description fields, plus the items of the previous search)
-            g_queries = Q(name__icontains=query) | Q(description__icontains=query) | Q(name__icontains=i.game) 
             games = games.filter(g_queries)
 
     context = {
