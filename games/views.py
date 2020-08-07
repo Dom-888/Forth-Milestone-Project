@@ -1,15 +1,23 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
-from .models import Game, Included
+from .models import Game, Included, Category
 
 
-# Show the games on sale on the site
+# Navbar Category selection
 def all_games(request):
     games = Game.objects.all()
     included = Included.objects.all()
     query = None
+    categories = None
 
+    if request.GET:
+        if 'category' in request.GET:
+            categories = request.GET['category'].split(',')
+            games = games.filter(category__name__in=categories)
+            categories = Category.objects.filter(name__in=categories)
+
+    # User Search
     if request.GET:
         if 'q' in request.GET:
             query = request.GET['q']
@@ -17,14 +25,13 @@ def all_games(request):
                 messages.error(request, "Please enter one or more words to search for")
                 return redirect(reverse('games'))
 
-            # Apply the search query to the Included model
+            # Apply the search query to the Included model (item field)
             i_queries = Q(item__icontains=query)
             items = included.filter(i_queries)
             for i in items:
                 print(i.game)
 
-
-            # Apply the search query to the Games 
+            # Apply the search query to the Games model (name and description fields, plus the items of the preovius search)
             g_queries = Q(name__icontains=query) | Q(description__icontains=query) | Q(name__icontains=i.game) 
             games = games.filter(g_queries)
 
