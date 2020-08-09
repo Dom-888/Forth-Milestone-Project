@@ -28,6 +28,21 @@ h1 { font-family: 'Sriracha', cursive; }
 
 .btn { color: #fff; }
 
+.btn-rounded {
+    font-weight: 500;
+    border-radius: 50px;
+}
+
+.btn-remove {
+    width: 39px;
+    height: 39px;
+}
+
+.btn-remove .feather {
+    position: relative; 
+    right: 5px;
+}
+
 /* ------------ Navbar ------------ */
 
 nav {
@@ -56,11 +71,6 @@ nav li {
 
 /* ----------- Home Page ---------- */
 
-#viewAllGames {
-    font-weight: 500;
-    border-radius: 50px;
-}
-
 /* ---------- Games Page ---------- */
 
 .card-body {
@@ -80,6 +90,19 @@ nav li {
 
 .details-card>div{
     width: 50%;
+}
+
+/* ------------- Cart ------------- */
+
+.cart-element {
+    display: flex;
+    align-items: center;
+    padding: 1em;
+}
+
+.cart-element img {
+    width: 70%;
+    height: 70%;
 }
 
 /* ------------ Footer ------------ */

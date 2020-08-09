@@ -4,7 +4,7 @@
 		<!-- Iterare through the games and display each one of them inside a bootstrap card -->
 		{% for game in games %}
 		<div class="col col-12 col-sm-6 col-lg-4 my-3">
-			<section class="game card">
+			<section class="card">
 				<div class="card-header">
                     {% if game.image %}
 					<a href="{% url 'game_details' game.pk %}">
