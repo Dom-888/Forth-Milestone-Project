@@ -71,12 +71,13 @@ nav li {
 
 /* ---------- All Pages ----------- */
 
-.card {
+/* Applied to game cards, game details and  */
+.game-section {
     background-color: #fff;
     border-radius: 10px;
--webkit-box-shadow: 6px 6px 5px -2px rgba(0,0,0,0.75);
--moz-box-shadow: 6px 6px 5px -2px rgba(0,0,0,0.75);
-box-shadow: 6px 6px 5px -2px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 6px 6px 5px -2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 6px 6px 5px -2px rgba(0,0,0,0.75);
+    box-shadow: 6px 6px 5px -2px rgba(0,0,0,0.75);
 }
 
 /* ----------- Home Page ---------- */
@@ -111,13 +112,13 @@ box-shadow: 6px 6px 5px -2px rgba(0,0,0,0.75);
 
 /* ------------- Cart ------------- */
 
-.cart-element {
+.cart-item {
     display: flex;
     align-items: center;
     padding: 1em;
 }
 
-.cart-element img {
+.cart-item img {
     width: 70%;
     height: 70%;
 }
