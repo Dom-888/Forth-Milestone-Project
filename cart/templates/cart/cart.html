@@ -34,7 +34,7 @@
         <div class="col-4 col-lg-1">
             <!-- Use the actual subtotal here -->
             <p>Subtotal:</p>
-            <p class="text-blue">€{{ item.game.price }}</p>
+            <p class="price">€{{ item.game.price }}</p>
         </div>
 
         <div class="col-4 col-lg-1">
@@ -60,7 +60,7 @@
             {% if free_delivery_delta > 0 %}
             <p class="mb-1  d-inline">
                 Buy more
-                <p class="text-blue d-inline">€{{ free_delivery_delta }}</p>
+                <p class="price">€{{ free_delivery_delta }}</p>
                 to get free shipping!
             </p>
             {% endif %}

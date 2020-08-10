@@ -71,13 +71,24 @@ nav li {
 
 /* ---------- All Pages ----------- */
 
-/* Applied to game cards, game details and  */
+body {
+    /* subtract footer height */
+    min-height: 100vh;
+    background-color: #E5E5E5;
+}
+
+/* Applied to game cards, game details and cart items*/
 .game-section {
     background-color: #fff;
     border-radius: 10px;
     -webkit-box-shadow: 6px 6px 5px -2px rgba(0,0,0,0.75);
     -moz-box-shadow: 6px 6px 5px -2px rgba(0,0,0,0.75);
     box-shadow: 6px 6px 5px -2px rgba(0,0,0,0.75);
+}
+
+.price {
+    color: #1F96F4; 
+    font-weight: 500
 }
 
 /* ----------- Home Page ---------- */
