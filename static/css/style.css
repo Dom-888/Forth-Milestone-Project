@@ -72,7 +72,7 @@ nav li {
 /* ----------- Home Page ---------- */
 
 .carousel-item {
-    height: 66vh;
+    height: 67vh;
 }
 
 .carousel-item img {
@@ -93,14 +93,6 @@ nav li {
 }
 
 /* --------- Details Page --------- */
-
-.details-card {
-    display: flex;
-}
-
-.details-card>div{
-    width: 50%;
-}
 
 /* ------------- Cart ------------- */
 

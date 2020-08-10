@@ -9,13 +9,11 @@
 
 		<!-- Game Image -->
 		<div class="col-12 col-sm-6">
-			<div class="details-card">
-				{% if game.image %}
-				<img class="img-fluid" src="{{ game.image.url }}" alt="{{ game.name }}">
+			{% if game.image %}
+			<img class="img-fluid" src="{{ game.image.url }}" alt="{{ game.name }}">
                 {% else %}
-				<img class="img-fluid" src="/media/misc/no_image.jpg" alt="{{ game.name }}">
+			<img class="img-fluid" src="/media/misc/no_image.jpg" alt="{{ game.name }}">
                 {% endif %}
-			</div>
 			</div>
 
 			<!-- Game Features -->
@@ -43,10 +41,10 @@
 							<input class="form-control qty_input" type="number" name="quantity" value="1" min="1" max="99" data-item_id="{{ game.pk }}" id="id_qty_{{ game.pk }}">
 						</div>
 
-						<input type="submit" class="btn btn-success btn-lg px-4" value="Add to Cart">
+							<input type="submit" class="btn btn-success btn-lg px-4" value="Add to Cart">
 
-                        <!-- # Redirect the user to the same page after the item is added to the shopping cart -->
-						<input type="hidden" name="redirect_url" value="{{ request.path }}">
+							<!-- # Redirect the user to the same page after the item is added to the shopping cart -->
+							<input type="hidden" name="redirect_url" value="{{ request.path }}">
 					</div>
 
 				</form>
@@ -60,7 +58,7 @@
 		<hr>
 		<h1 class="text-center">Similar Games</h1>
 
-        <!-- Show a preview of the games in the same category -->
-        {% include 'includes/game_cards.html' %}
+		<!-- Show a preview of the games in the same category -->
+		{% include 'includes/game_cards.html' %}
 
-	{% endblock %}
+		{% endblock %}
