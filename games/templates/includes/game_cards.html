@@ -9,7 +9,9 @@
                     {% if game.image %}
 					<a href="{% url 'game_details' game.pk %}">
 						<img class="img-fluid" src="{{ game.image.url }}" alt="{{ game.name }}">
+                    </a>
                     {% else %}
+                    <a href="{% url 'game_details' game.pk %}">
 						<img class="img-fluid" src="/media/misc/no_image.jpg" alt="{{ game.name }}">
                     </a>                   
                     {% endif %}
