@@ -1,11 +1,11 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, reverse
 
 # Show the cart page
 def view_cart(request):
 
     return render(request, 'cart/cart.html')
 
-# Add the the specified quantity of the selected game to the cart
+# Add the specified quantity of the selected game to the cart
 def add_to_cart(request, item_id):
 
     quantity = int(request.POST.get('quantity'))
@@ -19,3 +19,12 @@ def add_to_cart(request, item_id):
 
     request.session['cart'] = cart
     return redirect(redirect_url)
+
+# Remove the item from the cart
+def remove_cart_item(request, item_id):
+    cart = request.session.get("cart", {})
+    cart.pop(item_id)
+    request.session["cart"] = cart
+    # Message: "Item removed from cart"
+    return redirect(reverse("view_cart"))
+
