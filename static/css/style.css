@@ -71,6 +71,16 @@ nav li {
 
 /* ----------- Home Page ---------- */
 
+.carousel-item {
+    height: 66vh;
+}
+
+.carousel-item img {
+    height: 100%;
+    background-position: center 50%;
+    object-fit: cover;
+}
+
 /* ---------- Games Page ---------- */
 
 .card-body {
