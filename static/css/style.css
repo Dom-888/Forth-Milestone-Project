@@ -69,6 +69,16 @@ nav li {
     margin: 1em 1em 0 !important;    
 }
 
+/* ---------- All Pages ----------- */
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+-webkit-box-shadow: 6px 6px 5px -2px rgba(0,0,0,0.75);
+-moz-box-shadow: 6px 6px 5px -2px rgba(0,0,0,0.75);
+box-shadow: 6px 6px 5px -2px rgba(0,0,0,0.75);
+}
+
 /* ----------- Home Page ---------- */
 
 .carousel-item {
@@ -81,15 +91,20 @@ nav li {
     object-fit: cover;
 }
 
-/* ---------- Games Page ---------- */
+/* ---------- Game Cards ---------- */
 
-.card-body {
-    display: flex;
+.card-header {
+    background-color: #fff;
+    border-radius: 10px !important;
+    border: none !important;
 }
 
-.card-body>p{
-    text-align: center;
-    width: 50%;
+.card-title {
+    color: #000;
+}
+
+.card a:link {
+  text-decoration: none;
 }
 
 /* --------- Details Page --------- */
