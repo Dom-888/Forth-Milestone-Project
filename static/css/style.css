@@ -72,9 +72,11 @@ nav li {
 /* ---------- All Pages ----------- */
 
 body {
-    /* subtract footer height */
-    min-height: 100vh;
     background-color: #E5E5E5;
+}
+
+main {
+    min-height: calc(100vh - 120px);
 }
 
 /* Applied to game cards, game details and cart items*/
@@ -135,6 +137,10 @@ body {
 }
 
 /* ------------ Footer ------------ */
+
+footer { 
+    height: 60px;
+}
 
 /* --------- Media Queries -------- */
 
