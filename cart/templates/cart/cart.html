@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load tools %}
 
 {% block content %}
 
@@ -24,7 +25,7 @@
         <div class="col-12 col-lg-6">
             <h4>{{ item.game.name }}</h4>
             <p class="d-inline">Subtotal: </p>
-            <p class="d-inline price">€{{ item.game.price }}</p>
+            <p class="d-inline price">€{{ item.game.price | calc_subtotal:item.quantity}}</p>
             <p class="text-lgray">{{ item.game.sku }}</p>
         </div>
 
