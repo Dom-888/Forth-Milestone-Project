@@ -28,3 +28,15 @@ def remove_cart_item(request, item_id):
     # Message: "Item removed from cart"
     return redirect(reverse("view_cart"))
 
+# Change item quantity in the cart
+def update_cart_item_quantity(request, item_id):
+    quantity = int(request.POST.get("quantity"))
+    cart = request.session.get("cart", {})
+
+    if quantity > 0:
+        cart[item_id] = quantity
+    else:
+        cart.pop(item_id)
+
+    request.session["cart"] = cart
+    return redirect(reverse("view_cart"))

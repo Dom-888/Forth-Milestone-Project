@@ -13,7 +13,7 @@
 	<div class="row justify-content-center bg-white cart-item game-section mt-5">
 
 		<div class="col-12 col-lg-3">
-            <!-- Clicking here should return to the details page -->
+			<!-- Clicking here should return to the details page -->
 			{% if item.game.image %}
 			<img class="img-fluid" src="{{ item.game.image.url }}" alt="{{ item.game.name }}">
             {% else %}
@@ -22,45 +22,55 @@
         </div>
 
         <div class="col-12 col-lg-6">
-			<h4>{{ item.game.name }}</h4>
-            <p class="lgray-text">{{ item.game.sku }}</p>
-		</div>
+            <h4>{{ item.game.name }}</h4>
+            <p class="d-inline">Subtotal: </p>
+            <p class="d-inline price">€{{ item.game.price }}</p>
+            <p class="text-lgray">{{ item.game.sku }}</p>
+        </div>
 
-        <div class="col-4 col-lg-1">
+        <div class="col-6 col-lg-2 h-80px">
             <p>Quantity:</p>
-            <p>{{ item.quantity }}</p>
+            <form action="{% url 'update_cart_item_quantity' item.item_id %}" method="POST" class="d-flex">
+                {% csrf_token %}
+                <div class="w-50">
+                    <div class="form-group">
+                        <div class="input-group text-center">
+                            <input type="number" name="quantity" min="0" max="999" class="form-control" value="{{ item.quantity }}" widht="50px">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-50">
+                    <button type="submit" class="btn btn-success btn-rounded btn-cart-item"><i data-feather="edit-3"></i></button>
+                </div>
+            </form>
+
         </div>
 
-        <div class="col-4 col-lg-1">
-            <!-- Use the actual subtotal here -->
-            <p>Subtotal:</p>
-            <p class="price">€{{ item.game.price }}</p>
-        </div>
-
-        <div class="col-4 col-lg-1">
+        <div class="col-6 col-lg-1 h-80px">
             <p>Remove:</p>
-            <a type="button" class="btn btn-danger btn-rounded btn-remove" href="{% url 'remove_cart_item' item.item_id %}"><i data-feather="trash-2"></i></a>
+            <a type="button" class="btn btn-danger btn-rounded btn-cart-item"
+                href="{% url 'remove_cart_item' item.item_id %}"><i data-feather="trash-2"></i></a>
         </div>
-    </div>
+	</div>
 
-    {% endfor %}
+	{% endfor %}
     <div>
         <div>
             <h5 class="mt-4">Total: €{{ total|floatformat:2 }}</h5>
-            <h5>Shipping: 
-            {% if delivery > 0 %}
-            €{{ delivery|floatformat:2 }}
-            {% else %}
-            FREE
-            {% endif %}
+            <h5>Shipping:
+                {% if delivery > 0 %}
+                €{{ delivery|floatformat:2 }}
+                {% else %}
+                FREE
+                {% endif %}
             </h5>
             <h4 class="mt-4">
                 <strong>Grand Total: €{{ grand_total|floatformat:2 }}</strong>
             </h4>
             {% if free_delivery_delta > 0 %}
-            <p class="mb-1  d-inline">
+            <p class="d-inline">
                 Buy more
-                <p class="price">€{{ free_delivery_delta }}</p>
+                <p class="price d-inline">€{{ free_delivery_delta }}</p>
                 to get free shipping!
             </p>
             {% endif %}
@@ -72,11 +82,11 @@
     </div>
 
 
-	{% else %}
-	<p class="mb-5">Your cart is empty, sad and lonely :(</p>
-	<a href="{% url 'games'%}" type="button" id="viewAllGames" class="btn btn-success btn-rounded btn-lg px-4">View
-		All Games</a>
-	{% endif %}
+    {% else %}
+    <p class="mb-5">Your cart is empty, sad and lonely :(</p>
+    <a href="{% url 'games'%}" type="button" id="viewAllGames" class="btn btn-success btn-rounded btn-lg px-4">View
+        All Games</a>
+    {% endif %}
 
 </div>
 

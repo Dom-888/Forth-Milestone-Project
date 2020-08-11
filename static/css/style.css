@@ -33,15 +33,16 @@ h1 { font-family: 'Sriracha', cursive; }
     border-radius: 50px;
 }
 
-.btn-remove {
+.btn-cart-item {
     width: 39px;
     height: 39px;
 }
 
-.btn-remove .feather {
+.btn-cart-item .feather {
     position: relative; 
     right: 5px;
 }
+
 
 /* ------------ Navbar ------------ */
 
@@ -134,6 +135,11 @@ main {
 .cart-item img {
     width: 70%;
     height: 70%;
+}
+
+
+.h-80px {
+    height: 80px;
 }
 
 /* ------------ Footer ------------ */
