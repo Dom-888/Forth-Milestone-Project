@@ -30,7 +30,7 @@ def remove_cart_item(request, item_id):
     game = get_object_or_404(Game, pk=item_id)
     cart = request.session.get("cart", {})
     cart.pop(item_id)
-    messages.success(request, f'{game.name} removed from cart') # Toast message
+    messages.info(request, f'{game.name} removed from cart') # Toast message
 
     request.session["cart"] = cart
     return redirect(reverse("view_cart"))
@@ -45,10 +45,10 @@ def update_cart_item_quantity(request, item_id):
 
         if quantity > 0:
             cart[item_id] = quantity
-            messages.success(request, f'Quantity for {game.name} updated to {quantity}') # Toast message
+            messages.info(request, f'Quantity for {game.name} updated to {quantity}') # Toast message
         else:
             cart.pop(item_id)
-            messages.success(request, f'{game.name} removed from cart') # Toast message
+            messages.info(request, f'{game.name} removed from cart') # Toast message
 
         request.session["cart"] = cart
         return redirect(reverse("view_cart"))
