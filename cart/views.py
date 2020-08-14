@@ -45,7 +45,7 @@ def update_cart_item_quantity(request, item_id):
 
         if quantity > 0:
             cart[item_id] = quantity
-            messages.success(request, f'Quantity for {game.name} updated') # Toast message
+            messages.success(request, f'Quantity for {game.name} updated to {quantity}') # Toast message
         else:
             cart.pop(item_id)
             messages.success(request, f'{game.name} removed from cart') # Toast message
