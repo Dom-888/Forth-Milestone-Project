@@ -45,6 +45,13 @@ h1 { font-family: 'Sriracha', cursive; }
 
 /* -------- Toast Messages -------- */
 
+.toast-container {
+    position: absolute;
+    top: 60px;
+    right: 0px;
+    z-index: 2;
+}
+
 /* ------------ Navbar ------------ */
 
 nav {
