@@ -26,7 +26,13 @@
 	{% if messages %}
 	<div class="toast-container">
         {% for message in messages %}
-            {% include 'includes/toasts/toast_cart_preview.html' %}
+            {% with message.level as level %}
+                {% if level == 40 %}
+                    {% include 'includes/toasts/toast_error.html' %}
+                {% else %}
+                    {% include 'includes/toasts/toast_cart_preview.html' %}
+                {% endif %}
+            {% endwith %}
         {% endfor %}
     </div>
 	{% endif %}
