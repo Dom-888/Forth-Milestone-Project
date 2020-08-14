@@ -24,7 +24,11 @@
 
 	<!-- Display toast messages -->
 	{% if messages %}
-	<div class="toast-container"></div>
+	<div class="toast-container">
+        {% for message in messages %}
+            {% include 'includes/toasts/toast_success.html' %}
+        {% endfor %}
+    </div>
 	{% endif %}
 
 	{% include 'includes/navbar.html' %}
