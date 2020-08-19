@@ -3,3 +3,4 @@ feather.replace();
 
 // Show toast messages
 $('.toast').toast('show');
+
