@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, reverse
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.conf import settings
 from .forms import OrderForm
@@ -42,17 +42,18 @@ def checkout(request):
                     )
                     order_line_item.save()
                 except:
-                    messages.error(request) #This may require a second parameter
+                    messages.error(request) 
                     order.delete()
                     return redirect(reverse('view_cart'))
 
             request.session['save_info'] = 'save-info' in request.POST
-            return redirect(reverse('checkout_success', args=[order.order_number]))
+            messages.info(request, 'Payment successful! \n You will receive an email with the order details.')
+            request.session["cart"] = {}
+            return redirect(reverse("games"))
         else:
-            messages.info(request, 'A problem was detected with the information entered, please try again.')                    
+            messages.info(request, 'Sorry, we were unable to process the payment.')                    
 
     else: # GET
-        # Show a message and redirect the user if he try to access the checkout page with an empty cart
         cart = request.session.get('cart', {})
         if not cart:
             messages.info(request, "Your cart is empty")
@@ -84,5 +85,4 @@ def checkout(request):
     return render(request, template, context)
 
 
-def checkout_success(request, order_number ):
-    print("please just work, please")
+
