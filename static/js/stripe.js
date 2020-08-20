@@ -1,6 +1,6 @@
-var stripe_publishable_key = $('#stripe_publishable_key').text().slice(1, -1);
-
-var stripe = Stripe(stripe_publishable_key);
+var stripePublishable_key = $('#stripe_publishable_key').text().slice(1, -1);
+var clientSecret = $('#client_secret').text().slice(1, -1);
+var stripe = Stripe(stripePublishable_key);
 var elements = stripe.elements();
 
 var style = {
@@ -32,4 +32,31 @@ card.addEventListener('change', function (event) {
     } else {
         errorDiv.textContent = '';
     }
+});
+
+
+// Submit form
+var form = document.getElementById('paymentForm');
+
+form.addEventListener('submit', function(ev) {
+    ev.preventDefault();
+    card.update({ 'disabled': true});
+    $('#submitButton').attr('disabled', true);
+    stripe.confirmCardPayment(clientSecret, {
+        payment_method: {
+            card: card,
+        }
+    }).then(function(result) {
+        if (result.error) {
+            var errorDiv = $('#credtiCardError');
+            var html = `<span>${result.error.message}</span>`;
+            $(errorDiv).html(html);
+            card.update({ 'disabled': false});
+            $('#submitButton').attr('disabled', false);
+        } else {
+            if (result.paymentIntent.status === 'succeeded') {
+                form.submit();
+            }
+        }
+    });
 });
