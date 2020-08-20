@@ -20,4 +20,16 @@ var style = {
 };
 
 var card = elements.create('card', {style: style});
-card.mount('#card-element');
+card.mount('#creditCard');
+
+
+// Realtime validation errors on the credit card field
+card.addEventListener('change', function (event) {
+    var errorDiv = $('#creditCardError'); 
+    if (event.error) {
+        var html = `<span>${event.error.message}</span>`;
+        $(errorDiv).html(html);
+    } else {
+        errorDiv.textContent = '';
+    }
+});
