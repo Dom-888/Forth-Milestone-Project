@@ -49,14 +49,14 @@ h1 { font-family: 'Sriracha', cursive; }
     position: absolute;
     top: 60px;
     right: 0px;
-    z-index: 2;
+    z-index: 3;
 }
 
 /* ------------ Navbar ------------ */
 
 nav {
     height: 60px;
-    z-index: 1;
+    z-index: 2;
 }
 
 nav a { 
