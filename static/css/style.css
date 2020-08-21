@@ -29,9 +29,10 @@ h1 { font-family: 'Sriracha', cursive; }
 .btn { color: #fff; }
 
 .btn-rounded {
-    font-size: 22px;
+    /* font-size: 22px; */
     font-weight: 500;
     border-radius: 50px;
+    margin-bottom: 3em;
 }
 
 .btn-cart-item {
@@ -134,8 +135,8 @@ main {
 
 /* --------- Details Page --------- */
 
-/* Apply to cart too, remove the inline style*/
-.input-group-qty {
+
+.input-qty {
     width: 50px;
 }
 
