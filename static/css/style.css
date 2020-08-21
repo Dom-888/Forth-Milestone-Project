@@ -29,6 +29,7 @@ h1 { font-family: 'Sriracha', cursive; }
 .btn { color: #fff; }
 
 .btn-rounded {
+    font-size: 22px;
     font-weight: 500;
     border-radius: 50px;
 }
@@ -99,7 +100,8 @@ main {
 
 .price {
     color: #1F96F4; 
-    font-weight: 500
+    font-size: 16px;
+    font-weight: 500;
 }
 
 /* ----------- Home Page ---------- */
@@ -131,6 +133,15 @@ main {
 }
 
 /* --------- Details Page --------- */
+
+/* Apply to cart too, remove the inline style*/
+.input-group-qty {
+    width: 50px;
+}
+
+#addToCart {
+    width: 100%;
+}
 
 /* ------------- Cart ------------- */
 
