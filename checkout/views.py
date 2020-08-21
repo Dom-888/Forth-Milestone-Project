@@ -47,6 +47,7 @@ def checkout(request):
                     return redirect(reverse('view_cart'))
 
             request.session['save_info'] = 'save-info' in request.POST
+            
             messages.info(request, 'Payment successful! \n You will receive an email with the order details.')
             request.session["cart"] = {}
             return redirect(reverse("games"))
