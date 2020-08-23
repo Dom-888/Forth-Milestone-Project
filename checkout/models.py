@@ -6,6 +6,7 @@ from django.conf import settings
 from games.models import Game
 from django.core.validators import RegexValidator
 from django_countries.fields import CountryField
+from accounts.models import UserAccount
 
 
 class Order(models.Model):
@@ -14,6 +15,7 @@ class Order(models.Model):
     phone_validator = RegexValidator(regex=r'^\+?1?\d{9,15}$', message="Invalid phone number.")
 
     order_number = models.CharField(max_length=32, null=False, editable=False)
+    user_account = models.ForeignKey(UserAccount, on_delete=models.SET_NULL, null=True, blank=True, related_name='orders')
     first_name = models.CharField(max_length=40, blank=False)
     last_name = models.CharField(max_length=40, blank=False)
     email = models.EmailField(validators=[email_validator], max_length=254, null=False, blank=False)
