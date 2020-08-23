@@ -2,5 +2,18 @@
 {% load static %}
 
 {% block content %}
+
+    <!-- Selected Category or Search Term-->
+    {% if categories %}
+        {% for i in categories %}
+            <h1>{{ i.display_name }}</h1>
+        {% endfor %}
+    {% elif search_term %}
+        <h1>Results for: {{ search_term }}</h1>
+        {% else %}
+    <h1>All Games</h1>
+    {% endif %}
+
+    <!-- Game Cards -->
     {% include 'includes/game_cards.html' %}
 {% endblock %}

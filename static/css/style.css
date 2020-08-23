@@ -106,6 +106,10 @@ main {
     font-weight: 500;
 }
 
+h1 {
+    text-align: center;
+}
+
 /* ----------- Home Page ---------- */
 
 .carousel-item {

@@ -22,7 +22,7 @@ def all_games(request):
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
-                messages.error(request, "Please enter one or more words to search for")
+                messages.info(request, "Please enter one or more words to search for")
                 return redirect(reverse('games'))
             
             # Search in the name and description fields of the Game model
@@ -41,6 +41,7 @@ def all_games(request):
     context = {
         'games': games,
         'search_term': query,
+        'categories': categories,
     }
 
     return render(request, 'games/games.html', context)
