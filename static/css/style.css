@@ -162,6 +162,20 @@ main {
     height: 80px;
 }
 
+/* ----------- Checkout ----------- */
+
+#creditCard {
+    background-color: #fff;
+    border: 1px solid #CED4DA;
+    border-radius: 5px;
+    padding: 1em;
+}
+
+.checkout-buttons .feather {
+    position: relative; 
+    bottom: 2px;
+}
+
 /* ------------ Footer ------------ */
 
 footer { 
