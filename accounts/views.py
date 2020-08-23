@@ -1,3 +1,12 @@
 from django.shortcuts import render
+from django.contrib import messages
 
-# Create your views here.
+from checkout.models import Order
+
+def account(request):
+    template = 'accounts/personal_informations.html'
+    
+    return render(template)
+
+
+# def order_history():

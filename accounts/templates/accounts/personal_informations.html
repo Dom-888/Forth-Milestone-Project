@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block content %}
+<div class="container">
+	<h1>Checkout</h1>
+	<div class="row justify-content-center">
+		<div class="col-12 col-lg-6">
+			<p class="text-muted px-3">first_name + last_name </p>
+			<form action="{% url 'checkout' %}" method="POST" id="paymentForm">
+				{% csrf_token %}
+				<fieldset class="px-3 mb-5">
+					{{ order_form.first_name | as_crispy_field }}
+					{{ order_form.last_name | as_crispy_field }}
+					{{ order_form.email | as_crispy_field }}
+					{{ order_form.phone_number | as_crispy_field }}
+					{{ order_form.street_address1 | as_crispy_field }}
+					{{ order_form.street_address2 | as_crispy_field }}
+					{{ order_form.town_or_city | as_crispy_field }}
+					{{ order_form.postcode | as_crispy_field }}
+					{{ order_form.county | as_crispy_field }}
+					{{ order_form.country | as_crispy_field }}
+				</fieldset>
+
+                <!-- Buttons -->
+				<div class="checkout-buttons d-flex mt-5 mb-2 overflow-hidden">
+					<a href="" class="btn btn-secondary btn-lg btn-rounded w-50 mx-3">Cancel</a>
+					<button id="submitButton" class="btn btn-success btn-lg btn-rounded w-50 mx-3">Save</button>
+				</div>
+
+			</form>
+		</div>
+	</div>
+</div>
+{% endblock %}
+
