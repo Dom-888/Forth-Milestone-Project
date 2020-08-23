@@ -11,16 +11,7 @@
 			<form action="{% url 'checkout' %}" method="POST" id="paymentForm">
 				{% csrf_token %}
 				<fieldset class="px-3 mb-5">
-					{{ order_form.first_name | as_crispy_field }}
-					{{ order_form.last_name | as_crispy_field }}
-					{{ order_form.email | as_crispy_field }}
-					{{ order_form.phone_number | as_crispy_field }}
-					{{ order_form.street_address1 | as_crispy_field }}
-					{{ order_form.street_address2 | as_crispy_field }}
-					{{ order_form.town_or_city | as_crispy_field }}
-					{{ order_form.postcode | as_crispy_field }}
-					{{ order_form.county | as_crispy_field }}
-					{{ order_form.country | as_crispy_field }}
+                    <p>fields here</p>
 				</fieldset>
 
                 <!-- Buttons -->
