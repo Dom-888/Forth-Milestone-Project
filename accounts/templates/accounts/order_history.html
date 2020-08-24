@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block content %}
+<div class="container">
+	<h1 class="overflow-hidden">{{user_name}}'s Order History</h1>
+	<div class="row justify-content-center">
+		<div class="col-12 col-lg-6">
+			<a href="{% url 'account' %}" class="btn btn-primary btn-lg btn-rounded bg-blue border-0 w-100">Go to
+				Delivery Information</a>
+			<form class="" action="{% url 'account' %}" method="POST" id="account-update-form">
+
+				<!-- Oders -->
+				{% if orders%}
+                    {% for order in orders %}
+                    <p>{{order}}</p>
+                    {% endfor %}
+				{% else %}
+				    <h4 class="my-5">You haven't placed any orders yet :|</h4>
+                {% endif %}
+
+				<!-- Buttons -->
+				<div class ="text-center"><a href="{% url 'games'%}" type="button" id="viewAllGames"
+					class="btn btn-success btn-rounded btn-lg px-4">View All Games</a></div>
+
+
+			</form>
+		</div>
+	</div>
+</div>
+{% endblock %}

@@ -4,11 +4,10 @@ from .models import UserAccount
 from .forms import UserAccountForm
 from checkout.models import Order
 
-
+# Show a form with user information and allows to update them
 def account(request):
     user = get_object_or_404(UserAccount, user=request.user)
     form = UserAccountForm(request.POST, instance=user)
-    orders = user.orders.all()
     template = 'accounts/delivery_information.html'
 
     # Update the user information
@@ -20,10 +19,21 @@ def account(request):
 
     context = {
         'user_name': user,
-        'orders': orders, # Move orders in another view
         'form': form
     }
 
     return render(request, template, context)
 
-# def order_history():
+
+# Show the user order history
+def order_history(request):
+    user = get_object_or_404(UserAccount, user=request.user)
+    orders = user.orders.all()
+    template = 'accounts/order_history.html'
+
+    context = {
+        'user_name': user,
+        'orders': orders, 
+    }
+    print("something")
+    return render(request, template, context)
