@@ -7,6 +7,9 @@ from games.models import Game
 from cart.contexts import cart_contents
 import stripe
 
+from accounts.models import UserAccount
+from accounts.forms import UserAccountForm
+
 
 def checkout(request):
     stripe_publishable_key = settings.STRIPE_PUBLISHABLE_KEY
@@ -28,6 +31,8 @@ def checkout(request):
             'county': request.POST['county'],
         }
         order_form = OrderForm(form_data)
+
+        # If the payment is successful
         if order_form.is_valid():
             order = order_form.save()
 
@@ -50,7 +55,31 @@ def checkout(request):
             
             messages.info(request, 'Payment successful! \r You will receive an email with the order details.')
             request.session["cart"] = {}
-            return redirect(reverse("games"))
+
+            if request.user.is_authenticated:
+                account = UserAccount.objects.get(user=request.user)
+                save_info = request.session.get('save_info')
+                order.user_account = account
+                order.save()
+
+                # Save the user's info
+                if save_info:
+                    user_data = {
+                        'default_phone_number': order.phone_number,
+                        'default_country': order.country,
+                        'default_postcode': order.postcode,
+                        'default_town_or_city': order.town_or_city,
+                        'default_street_address1': order.street_address1,
+                        'default_street_address2': order.street_address2,
+                        'default_county': order.county,
+                    }
+                    user_account_form = UserAccountForm(user_data, instance=account)
+                    if user_account_form.is_valid():
+                        user_account_form.save()
+
+            return redirect(reverse("games")) # Should return to {% url 'order_history' %}
+        
+        # If the payment fails
         else:
             messages.info(request, 'Sorry, we were unable to process the payment.')                    
 
