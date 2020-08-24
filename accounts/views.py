@@ -10,9 +10,18 @@ def account(request):
     form = UserAccountForm(request.POST, instance=user)
     orders = user.orders.all()
     template = 'accounts/delivery_information.html'
+
+    # Update the user information
+    if request.method == 'POST':
+        form = UserAccountForm(request.POST, instance=user)
+        if form.is_valid():
+            form.save()
+            messages.info(request, 'Account updated!')
+
     context = {
         'user_name': user,
-        'orders': orders
+        'orders': orders, # Move orders in another view
+        'form': form
     }
 
     return render(request, template, context)
