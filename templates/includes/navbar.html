@@ -41,7 +41,8 @@
 			{% if request.user.is_superuser %}
 			<li><a href="" class="nav-link">Product Management</a></li>
 			{% endif %}
-			<li><a href="" class="nav-link">My Profile</a></li>
+            <!-- Double check this -->
+			<li><a href="{% url 'account' %}" class="nav-link">Account</a></li> 
 			<li><a href="{% url 'account_logout' %}" class="nav-link">Logout</a></li>
 			{% else %}
 			<li><a href="{% url 'account_signup' %}" class="nav-link">Sign Up</a></li>
