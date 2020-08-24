@@ -88,7 +88,7 @@ body {
 
 main {
     padding-top: 60px;
-    min-height: calc(100vh - 120px);
+    min-height: calc(100vh - 60px);
 }
 
 /* Applied to game cards, game details and cart items*/
