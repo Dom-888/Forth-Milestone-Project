@@ -6,12 +6,12 @@ from checkout.models import Order
 
 
 def account(request):
-    user_name = get_object_or_404(UserAccount, user=request.user) # Do I need this?
-    form = UserAccountForm(instance=account)
-    orders = account.orders.all()
-    template = 'accounts/personal_informations.html'
+    user = get_object_or_404(UserAccount, user=request.user)
+    form = UserAccountForm(request.POST, instance=user)
+    orders = user.orders.all()
+    template = 'accounts/delivery_information.html'
     context = {
-        'user_name': user_name,
+        'user_name': user,
         'orders': orders
     }
 
