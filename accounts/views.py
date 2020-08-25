@@ -49,5 +49,4 @@ def order_history(request):
         'user_name': user,
         'orders': orders, 
     }
-    print("something")
     return render(request, template, context)
