@@ -65,8 +65,8 @@ def checkout(request):
                 # Save the user's info
                 if save_info:
                     user_data = {
-                        'default_first_name': account.user.first_name,
-                        'default_last_name': account.user.last_name,
+                        'default_first_name': order.first_name,
+                        'default_last_name': order.last_name,
                         'default_phone_number': order.phone_number,
                         'default_country': order.country,
                         'default_postcode': order.postcode,
