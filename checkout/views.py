@@ -65,6 +65,8 @@ def checkout(request):
                 # Save the user's info
                 if save_info:
                     user_data = {
+                        'default_first_name': account.user.first_name,
+                        'default_last_name': account.user.last_name,
                         'default_phone_number': order.phone_number,
                         'default_country': order.country,
                         'default_postcode': order.postcode,
@@ -100,14 +102,14 @@ def checkout(request):
             currency=settings.STRIPE_CURRENCY,
         )
         
-                # Prefill the form with the user's information, if he is authenticated
+        # Prefill the form with the user's information, if he is authenticated
         if request.user.is_authenticated:
             try:
                 account = UserAccount.objects.get(user=request.user)
                 order_form = OrderForm(initial={
-                    'first_name': account.user.first_name,
-                    'second_name': account.user.last_name,
-                    'email': account.user.email,
+                    'first_name': account.default_first_name,
+                    'last_name': account.default_last_name,
+                    'email': account.user.email, # change this
                     'phone_number': account.default_phone_number,
                     'country': account.default_country,
                     'postcode': account.default_postcode,

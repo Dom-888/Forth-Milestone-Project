@@ -12,6 +12,8 @@ class UserAccount(models.Model):
     phone_validator = RegexValidator(regex=r'^\+?1?\d{9,15}$', message="Invalid phone number.")
 
     user = models.OneToOneField(User, on_delete=models.CASCADE)
+    default_first_name = models.CharField(max_length=40, blank=True)
+    default_last_name = models.CharField(max_length=40, blank=True)
     default_phone_number = models.CharField(max_length=20, null=True, blank=True)
     default_country = CountryField(blank_label='Select your Country', null=True, blank=True)
     default_postcode = models.CharField(max_length=20, null=True, blank=True)

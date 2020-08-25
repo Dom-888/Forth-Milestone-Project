@@ -20,5 +20,4 @@ function scrollFunction() {
 //  When the user clicks on the return-to-top button, scroll to the top of the document
 function returnToTop() {
     $('html,body').animate({ scrollTop: 0 }, 'slow');
-    console.log("porcoddio")
 }
