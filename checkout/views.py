@@ -109,7 +109,7 @@ def checkout(request):
                 order_form = OrderForm(initial={
                     'first_name': account.default_first_name,
                     'last_name': account.default_last_name,
-                    'email': account.user.email, # change this
+                    'email': account.user.email,
                     'phone_number': account.default_phone_number,
                     'country': account.default_country,
                     'postcode': account.default_postcode,

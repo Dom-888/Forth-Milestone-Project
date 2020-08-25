@@ -7,8 +7,22 @@ from checkout.models import Order
 # Show a form with user information and allows to update them
 def account(request):
     user = get_object_or_404(UserAccount, user=request.user)
-    form = UserAccountForm(request.POST, instance=user)
-    template = 'accounts/delivery_information.html'
+    # form = UserAccountForm(request.POST, instance=user)
+    template = 'accounts/personal_information.html'
+
+    # Prefill the form with the user data
+    account = UserAccount.objects.get(user=request.user)
+    form = UserAccountForm(initial={
+        'first_name': account.default_first_name,
+        'last_name': account.default_last_name,
+        'phone_number': account.default_phone_number,
+        'country': account.default_country,
+        'postcode': account.default_postcode,
+        'town_or_city': account.default_town_or_city,
+        'street_address1': account.default_street_address1,
+        'street_address2': account.default_street_address2,
+        'county': account.default_county,
+        })
 
     # Update the user information
     if request.method == 'POST':
