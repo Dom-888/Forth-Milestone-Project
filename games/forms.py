@@ -12,14 +12,26 @@ class GameForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
+
         categories = Category.objects.all()
-        included = Included.objects.all()
         
-        # Apply display names to the category drop-down menu
+        # Apply display names to the category field
         display_names = []
         for category in categories:
 	        display_names.append((category.id, category.display_name))
 
         self.fields['category'].choices = display_names
+
+
+class IncludedForm(forms.ModelForm):
+
+    class Meta:
+        model = Included
+        fields = ('item','quantity')
+
+    #game = forms.ImageField() # The game must be the same of the new game primary key, somehow
+
+
+
 
 

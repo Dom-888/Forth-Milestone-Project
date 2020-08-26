@@ -8,7 +8,12 @@
 	<h1>Add Game to Inventory</h1>
 	<form action="POST" action="{% url 'add_game' %}" enctype="multipart/form-data">
 		{% csrf_token %}
-		{{ form | crispy }}
+		
+        
+        {{ game_form | crispy }}
+
+        <p>Included item</p>
+        {{ included_form | crispy }}
 
 		<!-- Buttons -->
 		<div class="checkout-buttons d-flex mt-5 mb-2 overflow-hidden">

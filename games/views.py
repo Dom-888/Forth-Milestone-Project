@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
 from .models import Game, Included, Category
-from .forms import GameForm
+from .forms import GameForm, IncludedForm
 
 
 # Navbar Category selection
@@ -79,10 +79,12 @@ owner to modify the game inventory.
 # @login_required 
 def add_game(request): 
         
-    form = GameForm()
+    game_form = GameForm()
+    included_form = IncludedForm()
     template = 'games/add_game.html'
     context = {
-        'form': form,
+        'game_form': game_form,
+        'included_form': included_form,
     }
 
     return render(request, template, context)    
