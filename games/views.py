@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
 from .models import Game, Included, Category
+from .forms import GameForm
 
 
 # Navbar Category selection
@@ -65,3 +66,33 @@ def game_details(request, game_pk):
     }
 
     return render(request, 'games/game_details.html', context)
+
+
+"""
+---------- Shop owner section ----------
+The following functions allow the store
+owner to modify the game inventory.
+
+"""
+
+# Add a new game to the inventory
+# @login_required 
+def add_game(request): 
+        
+    form = GameForm()
+    template = 'games/add_game.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)    
+
+
+# Edit an existing game to the inventory
+# @login_required
+# def edit_game(request):
+
+
+# Delete an existing game to the inventory
+# @login_required
+# def delete_game(request):
