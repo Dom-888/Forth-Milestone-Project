@@ -102,6 +102,7 @@ nav li {
 
 body {
     background-color: #E5E5E5;
+    position: relative;
 }
 
 main {
@@ -212,7 +213,17 @@ header p {
 /* ------------ Footer ------------ */
 
 footer { 
+    color: #fff;
     height: 60px;
+}
+
+.footer-icon { 
+    color: inherit !important;
+}
+
+.footer-icon:hover {
+    color: #FFD700 !important;
+    transition: all 0.4s ease 0s;
 }
 
 /* --------- Media Queries -------- */
