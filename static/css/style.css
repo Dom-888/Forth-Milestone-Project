@@ -153,6 +153,14 @@ header p {
 
 /* ---------- Game Cards ---------- */
 
+.game-card {
+    transition: transform .2s;
+}
+
+.game-card:hover {
+    transform: scale(1.05);
+}
+
 .card-header {
     background-color: #fff;
     border-radius: 10px !important;
