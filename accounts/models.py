@@ -2,14 +2,11 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.db.models.signals import post_save
 from django.dispatch import receiver
-from django.core.validators import RegexValidator
 from django_countries.fields import CountryField
 
 
 # Used to autofill the user's address information
 class UserAccount(models.Model):
-
-    phone_validator = RegexValidator(regex=r'^\+?1?\d{9,15}$', message="Invalid phone number.")
 
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     default_first_name = models.CharField(max_length=40, blank=True)
