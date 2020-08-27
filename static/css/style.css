@@ -152,9 +152,10 @@ h1 {
 }
 
 #logo img{
-    width: 350px;
+    /* width: 350px;
     max-width: 100vw;
-    height: auto;
+    height: auto; */
+    height: calc(33vh - 60px);
 }
 
 header p {
