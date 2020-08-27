@@ -10,6 +10,7 @@ from accounts.models import UserAccount
 
 class Order(models.Model):
 
+
     order_number = models.CharField(max_length=32, null=False, editable=False)
     user_account = models.ForeignKey(UserAccount, on_delete=models.SET_NULL, null=True, blank=True, related_name='orders')
     first_name = models.CharField(max_length=40, blank=False)

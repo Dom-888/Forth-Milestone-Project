@@ -21,6 +21,7 @@ def checkout(request):
         form_data = {
             'first_name': request.POST['first_name'],
             'last_name': request.POST['last_name'],
+            'email': request.POST['email'],
             'phone_number': request.POST['phone_number'],
             'country': request.POST['country'],
             'postcode': request.POST['postcode'],
@@ -108,6 +109,7 @@ def checkout(request):
                 order_form = OrderForm(initial={
                     'first_name': account.default_first_name,
                     'last_name': account.default_last_name,
+                    'email': account.user.email,
                     'phone_number': account.default_phone_number,
                     'country': account.default_country,
                     'postcode': account.default_postcode,
@@ -133,6 +135,5 @@ def checkout(request):
     }
 
     return render(request, template, context)
-
 
 
