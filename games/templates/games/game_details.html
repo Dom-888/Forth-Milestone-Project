@@ -5,66 +5,66 @@
 
 <div class="container">
 	<div class="row game-section mt-3">
-        <div class="col-12 mt-3">
-    	    <h1 class="text-center">{{ game.name }}</h1>
-        </div>
+		<div class="col-12 mt-3">
+			<h1 class="text-center">{{ game.name }}</h1>
+		</div>
 		<!-- Game Image -->
 		<div class="col-12 col-sm-6">
 			{% if game.image %}
-			<img class="img-fluid" src="{{ game.image.url }}" alt="{{ game.name }}">
-                {% else %}
-			<img class="img-fluid" src="/media/misc/no_image.jpg" alt="{{ game.name }}">
-                {% endif %}
-			</div>
+    			<img class="img-fluid" src="{{ game.image.url }}" alt="{{ game.name }}">
+            {% else %}
+	    		<img class="img-fluid" src="{{ STATIC_URL }}images/misc/no_image.jpg" alt="{{ game.name }}">
+            {% endif %}
+        </div>
 
-			<!-- Rating and Price -->
-			<div class="col-12 col-sm-6">
-				<div class="d-flex mt-5">
-                    <p class="w-50"><strong>User Rating:</strong></p>
-					<p class="w-50">⭐⭐⭐⭐⭐</p>
-				</div>
-                <div class="d-flex">
-                    <p class="w-50"><strong>Price:</strong></p>
-					<p class="price w-50">€{{ game.price }}</p>
-				</div>
+        <!-- Rating and Price -->
+        <div class="col-12 col-sm-6">
+            <div class="d-flex mt-5">
+                <p class="w-50"><strong>User Rating:</strong></p>
+                <p class="w-50">⭐⭐⭐⭐⭐</p>
+            </div>
+            <div class="d-flex">
+                <p class="w-50"><strong>Price:</strong></p>
+                <p class="price w-50">€{{ game.price }}</p>
+            </div>
 
-				<!-- Add-to-Cart Section -->
-				<form class="form" action="{% url 'add_to_cart' game.pk %}" method="POST">
-					{% csrf_token %}
+            <!-- Add-to-Cart Section -->
+            <form class="form" action="{% url 'add_to_cart' game.pk %}" method="POST">
+                {% csrf_token %}
 
-					<div class="form-group">
-                        <span><p class="d-inline"><strong>Quantity:</strong></p></span>
-                        <div class="input-group input-qty d-inline-block">
-                            <input class="form-control qty_input" type="number" name="quantity" value="1" min="1" max="99" data-item_id="{{ game.pk }}" id="id_qty_{{ game.pk }}">
-                        </div>
+                <div class="form-group">
+                    <span><p class="d-inline"><strong>Quantity:</strong></p></span>
+                    <div class="input-group input-qty d-inline-block">
+                        <input class="form-control qty_input" type="number" name="quantity" value="1" min="1" max="99" data-item_id="{{ game.pk }}" id="id_qty_{{ game.pk }}">
+                    </div>
 
-						<input type="submit" id="addToCart" class="btn btn-success btn-lg btn-rounded px-4 d-block mt-1" value="Add to Cart">
+                        <input type="submit" id="addToCart" class="btn btn-success btn-lg btn-rounded px-4 d-block mt-1" value="Add to Cart">
                         <!-- # Redirect the user to the same page after the item is added to the shopping cart -->
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
-					</div>
+                </div>
 
-				</form>
+            </form>
 
-			</div>
+        </div>
 
 
-            <!-- Features and Included -->
-			<div class="col-12 col-sm-6">
-				<h3 class="text-center">Features</h3>
-				<p>{{ game.description}}</p>
-			</div>
-			<div class="col-12 col-sm-6">
-				<h3 class="text-center">Includes</h3>
-				{% for i in included %}
-				<p> {{ i.quantity }} X {{ i.item }} </p>
-				{% endfor %}
-			</div>
-		</div>
+        <!-- Features and Included -->
+        <div class="col-12 col-sm-6">
+            <h3 class="text-center">Features</h3>
+            <p>{{ game.description}}</p>
+        </div>
+        <div class="col-12 col-sm-6">
+            <h3 class="text-center">Includes</h3>
+            {% for i in included %}
+            <p> {{ i.quantity }} X {{ i.item }} </p>
+            {% endfor %}
+        </div>
+    </div>
 
-		<hr>
-		<h1 class="text-center">Similar Games</h1>
+    <hr>
+    <h1 class="text-center">Similar Games</h1>
 
-		<!-- Show a preview of the games in the same category -->
-		{% include 'includes/game_cards.html' %}
+    <!-- Show a preview of the games in the same category -->
+    {% include 'includes/game_cards.html' %}
 
-		{% endblock %}
+    {% endblock %}

@@ -13,7 +13,7 @@
 						{% if game.image %}
 						<img class="img-fluid" src="{{ game.image.url }}" alt="{{ game.name }}">
                         {% else %}
-						<img class="img-fluid" src="/media/misc/no_image.jpg" alt="{{ game.name }}">
+                        <img class="img-fluid" src="{{ STATIC_URL }}images/misc/no_image.jpg" alt="{{ game.name }}">
                         {% endif %}
 					</div>
 					<div class="card-body">
