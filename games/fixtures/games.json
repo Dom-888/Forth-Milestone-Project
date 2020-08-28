@@ -7,7 +7,7 @@
 			"description": "Take over the world in this game of strategy conquest, now with updated figures and improved Mission cards. In the Risk game, the goal is simple: players aim to conquer their enemies’ territories by building an army, moving their troops in, and engaging in battle. Depending on the roll of the dice, a player will either defeat the enemy or be defeated. This exciting game is filled with alliances, betrayal, and surprise attacks.",
 			"price": 39.99,
 			"category": 1,
-			"image": "/games/risk_classic.jpg"
+			"image": "games/risk_classic.jpg"
 		}
 	},
 	{
@@ -19,7 +19,7 @@
 			"description": "Everyone loves the thrill of bankrupting an opponent, but it pays to play nice, because fortunes could change with the roll of the dice. Experience the ups and downs by collecting property colours sets to build houses, and maybe even upgrade to a hotel! The more properties each player owns, the more rent can be charged. Chance cards could be worth money, or one might just say Go To Jail!",
 			"price": 19.99,
 			"category": 1,
-			"image": "/games/monopoly.jpg"
+			"image": "games/monopoly.jpg"
 		}
 	},
 	{
@@ -31,7 +31,7 @@
 			"description": "Reclusive millionaire Samuel Black’s been murdered in his mansion. Now it’s up to you to crack the case. Question everything to unravel the mystery. Who did it? Where? And with what weapon? Ransack the mansion for clues, ask cunning detective questions and leave no card unturned. Solve the murder first to win. This pack includes new weapons, new rooms, more suspense!",
 			"price": 24.99,
 			"category": 1,
-			"image": "/games/cluedo.jpg"
+			"image": "games/cluedo.jpg"
 		}
 	},
 	{
@@ -43,7 +43,7 @@
 			"description": "In this classic word game, players use their letter-tiles to form words on the gameboard. Each word laid out earns points based on the commonality of the letters used, with certain board spaces giving bonuses. A word can only be played if it uses at least one already-played tile or adds to an already-played word. Potential words can be strategically rejected if they would give an opponent access to the better bonus spaces.",
 			"price": 19.99,
 			"category": 1,
-			"image": "/games/scrabble.jpg"
+			"image": "games/scrabble.jpg"
 		}
 	},
 	{
@@ -55,7 +55,7 @@
 			"description": "Four virulent diseases have broken out simultaneously all over the world and it is up to a team of specialists in various fields to find cures for these diseases before mankind is wiped out. Players must work together, playing to their characters’ strengths and planning their strategy of eradication before the diseases overwhelm the world with ever-increasing outbreaks.",
 			"price": 29.99,
 			"category": 1,
-			"image": "/games/pandemic.jpg"
+			"image": "games/pandemic.jpg"
 		}
 	},
 	{
@@ -67,7 +67,7 @@
 			"description": "With elegantly simple gameplay, Ticket to Ride can be learned in 3 minutes. Players collect cards of various types of train cars they then use to claim railway routes in North America. The longer the routes, the more points they earn. Additional points come to those who fulfill Destination Tickets – goal cards that connect distant cities; and to the player who builds the longest continuous route",
 			"price": 29.99,
 			"category": 1,
-			"image": "/games/ticket_to_ride.jpg"
+			"image": "games/ticket_to_ride.jpg"
 		}
 	},
 	{
@@ -79,7 +79,7 @@
 			"description": "Try to be the dominant force on the island of Catan by building settlements, cities, and roads. On each turn dice are rolled to determine what resources the island produces. Players collect these resources to build up their civilizations to get to 10 victory points and win the game. Catan is one of the most popular games in recent history due to its amazing ability to appeal to non-gamers and gamers alike.",
 			"price": 44.99,
 			"category": 1,
-			"image": "/games/catan.jpg"
+			"image": "games/catan.jpg"
 		}
 	},
 	{
@@ -91,7 +91,7 @@
 			"description": "In Uno, players race to empty their hands and catch opposing players with cards left in theirs, which score points. In turns, players attempt to play a card by matching its color, number, or word to the topmost card on the discard pile. If unable to play, players draw a card from the draw pile, and if still unable to play, they pass their turn. Wild and special cards spice things up a bit. ",
 			"price": 8.99,
 			"category": 2,
-			"image": "/games/uno.jpg"
+			"image": "games/uno.jpg"
 		}
 	},
 	{
@@ -103,7 +103,7 @@
 			"description": "The game begins with one player reading out a question or fill-in-the-blanks phrase from a Black Card. Everyone else picks their funniest White Card. It's up to the person who read out the Black Card to pick who they think played the funniest White Card.They then get the Black Card as a point. You repeat this process until one person collects the most Black Cards and wins the game.",
 			"price": 34.99,
 			"category": 2,
-			"image": "/games/cards_against_humanity.jpg"
+			"image": "games/cards_against_humanity.jpg"
 		}
 	},
 	{
@@ -115,7 +115,7 @@
 			"description": "Exploding Kittens is a kitty-powered version of Russian Roulette. Players take turns drawing cards until someone draws an exploding kitten and loses the game. The deck is made up of cards that let you avoid exploding by peeking at cards before you draw, forcing your opponent to draw multiple cards, or shuffling the deck.",
 			"price": 33.99,
 			"category": 2,
-			"image": "/games/exploding_kittens.jpg"
+			"image": "games/exploding_kittens.jpg"
 		}
 	},
 	{
@@ -127,7 +127,7 @@
 			"description": "Go down in the dungeon. Kill everything you meet. Backstab your friends. Grab the treasure and run. Munchkin is the mega-hit card game about dungeon adventure... with none of that stupid roleplaying stuff. You and your friends compete to kill monsters and grab magic items. And what magic items! Don the Horny Helmet and the Boots of Butt-Kicking. Wield the Staff of Napalm... or maybe the Chainsaw of Bloody Dismemberment...",
 			"price": 14.99,
 			"category": 2,
-			"image": "/games/munchkin.jpg"
+			"image": "games/munchkin.jpg"
 		}
 	},
 	{
@@ -139,7 +139,7 @@
 			"description": "Fluxx is a card game where the cards themselves determine the current rules of the game. At the start of the game, each player holds three cards and on a turn a player draws one card, then plays one card. By playing cards, you can put new rules into play that change numerous aspects of the game: how many cards to draw or play, how many cards you can hold in hand or keep on the table in front of you, and (most importantly) how to win the game.",
 			"price": 9.99,
 			"category": 2,
-			"image": "/games/fluxx.jpg"
+			"image": "games/fluxx.jpg"
 		}
 	},
 	{
@@ -151,7 +151,7 @@
 			"description": "Two of the most classic strategy games: Chess and Draughts. Whether you are trying to checkmate your opponents King, or capture and remove all your opponents draughtsmen from the games board, you will most certainly have hours of fun! Develop your problem solving skills, strategic planning and concentration. The ideal toy for young developing minds!",
 			"price": 14.99,
 			"category": 3,
-			"image": "/games/chess_and_draughts.jpg"
+			"image": "games/chess_and_draughts.jpg"
 		}
 	},
 	{
@@ -163,7 +163,7 @@
 			"description": "Backgammon is one of the oldest and most popular games in the world. It is a two-player game where each player has fifteen pieces that move between twenty-four triangles (points) according to the roll of two dice. The objective of the game is to be first to bear off, i.e. move all fifteen checkers off the board. ",
 			"price": 44.99,
 			"category": 3,
-			"image": "/games/backgammon.jpg"
+			"image": "games/backgammon.jpg"
 		}
 	},
 	{
@@ -175,7 +175,7 @@
 			"description": "Onitama is an elegant and simple two player abstract strategy game where you take on the role of a Master, guiding your monk followers, in an attempt to defeat your opponent. Armed only with a handful of moves, your cunning, and your wits, have you the skill to be victorious?",
 			"price": 12.99,
 			"category": 3,
-			"image": "/games/onitama.jpg"
+			"image": "games/onitama.jpg"
 		}
 	},
 	{
@@ -187,7 +187,7 @@
 			"description": "Hive is a board game with a difference. There is no board! The pieces are added to the playing area thus creating the board. As more and more pieces are added the game becomes a fight to see who can be the first to capture the opposing Queen Bee.",
 			"price": 9.99,
 			"category": 3,
-			"image": "/games/hive.jpg"
+			"image": "games/hive.jpg"
 		}
 	},
 	{
@@ -199,7 +199,7 @@
 			"description": "Use cunning tactics to outwit your opponent with the Othello board game. In this classic, fast-paced strategy game, you must try to trap your rival's playing pieces and turn them over. The object of the game is to have the majority of your disks face up on the board at the end of the game. The lead can change at any moment with the flip of a disk. The player with the most pieces of the same colour wins.",
 			"price": 14.99,
 			"category": 3,
-			"image": "/games/othello.jpg"
+			"image": "games/othello.jpg"
 		}
 	},
 	{
@@ -211,7 +211,7 @@
 			"description": "RISK®: Game of Thrones™ Edition Game escalates Risk, the Classic Games of strategic conquest, to an epic level of chaos and war in a battle for the Iron Throne. This game of strategic conquest will test the wits and bravery of both Risk® and Game of Thrones™ fans. So, ready your swords for battle as you vie for domination of the Seven Kingdoms and beyond, because in RISK®: Game of Thrones™ Edition Game only one victor can sit on the Iron Throne.",
 			"price": 59.99,
 			"category": 4,
-			"image": "/games/risk_got.jpg"
+			"image": "games/risk_got.jpg"
 		}
 	},
 	{
@@ -223,7 +223,7 @@
 			"description": "The Monopoly Fortnite board game brings the thrill of Fortnite battles to Monopoly. Claim iconic Fortnite locations as property, battle opponents and avoid the Storm to survive. As players move around the Monopoly Fortnite gameboard, the action die lets you pick up health packs, attack other players and build walls. The last player standing wins!",
 			"price": 24.99,
 			"category": 4,
-			"image": "/games/monopoly_fortnite.jpg"
+			"image": "games/monopoly_fortnite.jpg"
 		}
 	},
 	{
@@ -235,7 +235,7 @@
 			"description": "Get ready to discover the secrets of Dunder Mifflin, Scranton. Michael Scott called a mandatory team-building event, where six employees must work independently to figure out who killed Toby Flenderson, what weapon was used and where it occurred. The employee that wins gets a week's paid vacation!",
 			"price": 29.99,
 			"category": 4,
-			"image": "/games/clue_office.jpg"
+			"image": "games/clue_office.jpg"
 		}
 	}
 ]
