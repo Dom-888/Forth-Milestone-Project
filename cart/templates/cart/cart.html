@@ -16,7 +16,7 @@
 		<div class="col-12 col-lg-3">
 			<!-- Clicking here should return to the details page -->
 			{% if item.game.image %}
-			<img class="img-fluid" src="{{ STATIC_URL }}images{{ item.game.image.url }}" alt="{{ item.game.name }}">
+			<img class="img-fluid" src="{{ STATIC_URL }}images/media{{ item.game.image.url }}" alt="{{ item.game.name }}">
             {% else %}
 			<img class="img-fluid" src="{{ STATIC_URL }}images/misc/no_image.jpg" alt="{{ item.game.name }}">
             {% endif %}
