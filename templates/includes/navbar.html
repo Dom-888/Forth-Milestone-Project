@@ -38,9 +38,9 @@
 			</li>
             <!-- Authentication -->
 			{% if request.user.is_authenticated %}
-			{% if request.user.is_superuser %}
+			<!-- {% if request.user.is_superuser %}
 			<li><a href="" class="nav-link">Product Management</a></li>
-			{% endif %}
+			{% endif %} -->
 			<li><a href="{% url 'account' %}" class="nav-link">Account</a></li> 
 			<li><a href="{% url 'account_logout' %}" class="nav-link">Logout</a></li>
 			{% else %}

@@ -4,7 +4,7 @@
 
 {% block content %}
 <div class="container">
-	<h1 class="overflow-hidden">{{user_name}}'s Order History</h1>
+	<h1 class="overflow-hidden page-header">{{user_name}}'s Order History</h1>
 	<div class="row justify-content-center">
 		<div class="col-12 col-lg-6">
 			<a href="{% url 'account' %}" class="btn btn-primary btn-lg btn-rounded bg-blue border-0 w-100">Go to
@@ -17,7 +17,7 @@
                     <p>{{order}}</p>
                     {% endfor %}
 				{% else %}
-				    <h4 class="my-5">You haven't placed any orders yet :|</h4>
+				    <h4 class="section-header" class="my-5">You haven't placed any orders yet :|</h4>
                 {% endif %}
 
 				<!-- Buttons -->

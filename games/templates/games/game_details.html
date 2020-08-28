@@ -6,7 +6,7 @@
 <div class="container">
 	<div class="row game-section mt-3">
 		<div class="col-12 mt-3">
-			<h1 class="text-center">{{ game.name }}</h1>
+			<h1 class="page-header">{{ game.name }}</h1>
 		</div>
 		<!-- Game Image -->
 		<div class="col-12 col-sm-6">
@@ -50,11 +50,11 @@
 
         <!-- Features and Included -->
         <div class="col-12 col-sm-6">
-            <h3 class="text-center">Features</h3>
+            <h3 class="section-header">Features</h3>
             <p>{{ game.description}}</p>
         </div>
         <div class="col-12 col-sm-6">
-            <h3 class="text-center">Includes</h3>
+            <h3 class="section-header">Includes</h3>
             {% for i in included %}
             <p> {{ i.quantity }} X {{ i.item }} </p>
             {% endfor %}
@@ -62,7 +62,7 @@
     </div>
 
     <hr>
-    <h1 class="text-center">Similar Games</h1>
+    <h1 class="page-header">Similar Games</h1>
 
     <!-- Show a preview of the games in the same category -->
     {% include 'includes/game_cards.html' %}

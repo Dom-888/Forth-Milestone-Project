@@ -1,9 +1,29 @@
-/* --------- Google Fonts --------- */
+/* ---------- Typography ---------- */
 
+/* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Sriracha&display=swap');
 
 body { font-family: 'Roboto', sans-serif; }
-h1 { font-family: 'Sriracha', cursive; }
+
+.page-header {
+    text-align: center;
+    font-size: 30px !important;
+    font-weight: 500;
+    margin-top: 1em;
+    font-family: 'Sriracha', cursive;
+}
+
+.section-header {
+    text-align: center;
+    font-size: 22px !important;
+    font-weight: 500;
+}
+
+.price {
+    color: #1F96F4; 
+    font-size: 18px;
+    font-weight: 500;
+}
 
 /* --------- Color Palette -------- */
 
@@ -32,6 +52,10 @@ h1 { font-family: 'Sriracha', cursive; }
     /* font-size: 22px; */
     font-weight: 500;
     border-radius: 50px;
+}
+
+.btn-lg {
+    font-size: 22px;
 }
 
 .btn-cart-item {
@@ -77,6 +101,7 @@ h1 { font-family: 'Sriracha', cursive; }
 nav {
     height: 60px;
     z-index: 2;
+    font-size: 18px;
 }
 
 nav a { 
@@ -129,15 +154,6 @@ main {
     box-shadow: 6px 6px 5px -2px rgba(0,0,0,0.75);
 }
 
-.price {
-    color: #1F96F4; 
-    font-size: 16px;
-    font-weight: 500;
-}
-
-h1 {
-    text-align: center;
-}
 
 /* ----------- Home Page ---------- */
 
@@ -178,8 +194,8 @@ header p {
     border: none !important;
 }
 
-.card-title {
-    color: #000;
+.game-card .section-header {
+    color: #000 !important;
 }
 
 .card a:link {

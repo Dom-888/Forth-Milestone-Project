@@ -6,7 +6,7 @@
 
 <div class="container text-center">
 
-	<h1>Shopping Cart</h1>
+	<h1 class="page-header">Shopping Cart</h1>
 
 	{% if cart_items %}
 
@@ -23,7 +23,7 @@
         </div>
 
         <div class="col-12 col-lg-6">
-            <h4>{{ item.game.name }}</h4>
+            <h4 class="section-header">{{ item.game.name }}</h4>
             <p class="d-inline">Subtotal: </p>
             <p class="d-inline price">€{{ item.game.price | calc_subtotal:item.quantity}}</p>
             <p class="text-lgray">{{ item.game.sku }}</p>
@@ -84,7 +84,7 @@
 
 
     {% else %}
-    <h4 class="mb-5">Your cart is empty, sad and lonely :(</h4>
+    <h4 class="mb-5 section-header">Your cart is empty, sad and lonely :(</h4>
     <a href="{% url 'games'%}" type="button" id="viewAllGames" class="btn btn-success btn-rounded btn-lg px-4">View
         All Games</a>
     {% endif %}
