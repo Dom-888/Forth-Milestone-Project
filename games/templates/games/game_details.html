@@ -11,7 +11,7 @@
 		<!-- Game Image -->
 		<div class="col-12 col-sm-6">
 			{% if game.image %}
-    			<img class="img-fluid" src="{{ STATIC_URL }}images{{ game.image.url }}" alt="{{ game.name }}">
+    			<img class="img-fluid" src="{{ STATIC_URL }}images/media{{ game.image.url }}" alt="{{ game.name }}">
             {% else %}
 	    		<img class="img-fluid" src="{{ STATIC_URL }}images/misc/no_image.jpg" alt="{{ game.name }}">
             {% endif %}
