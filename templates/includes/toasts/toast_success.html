@@ -12,7 +12,11 @@
 		{% for item in cart_items %}
 		<div class="row">
 			<div class="col-3 my-1">
-				<img class="w-100" src="{{ STATIC_URL }}images/media/uno.jpg" alt="{{ item.game.name }}">
+				{% if 'USE_AWS' in os.environ %}
+				<img class="w-100" src="{{ item.game.image.url }}" alt="{{ item.game.name }}">
+                    {% else %}
+				<img class="w-100" src="{{ STATIC_MEDIA }}{{ item.game.image.url }}" alt="{{ item.game.name }}">
+                    {% endif %}
                         </div>
 				<div class="col-9">
 					<p class="my-0"><strong>{{ item.game.name }}</strong></p>
@@ -31,10 +35,10 @@
 						Spend <strong>€{{ free_delivery_delta }}</strong> more to get free next day delivery!
 					</p>
 					{% endif %}
-                    <div class="text-center">
-					<a href="{% url 'checkout'%}" type="button" id="viewAllGames"
-						class="btn btn-success btn-rounded px-4">Proceed to Checkout</a>
-                    </div>
+					<div class="text-center">
+						<a href="{% url 'checkout'%}" type="button" id="viewAllGames"
+							class="btn btn-success btn-rounded px-4">Proceed to Checkout</a>
+					</div>
 				</div>
 			</div>
 			{% endif %}
