@@ -6,11 +6,37 @@ from .models import Order, OrderLineItem
 from games.models import Game
 from cart.contexts import cart_contents
 import stripe
-
 from accounts.models import UserAccount
 from accounts.forms import UserAccountForm
+from django.core.mail import send_mail
+from django.template.loader import render_to_string
+from django.conf import settings
 
 
+# Send a confirmation email to the user after completing a purchase
+def send_confirmation_email(order):
+        email = order.email
+
+        order.delivery_cost = round(order.delivery_cost, 2)
+        order.grand_total = round(order.grand_total, 2)
+
+        subject = render_to_string(
+            'checkout/confirmation_email/subject.txt',
+            {'order': order})
+        body = render_to_string(
+            'checkout/confirmation_email/body.txt',
+            {'order': order, 'contact_email': settings.DEFAULT_FROM_EMAIL})
+        
+        send_mail(
+            subject,
+            body,
+            settings.DEFAULT_FROM_EMAIL,
+            [email]
+        )
+        # print(email)
+
+
+# Process the order
 def checkout(request):
     stripe_publishable_key = settings.STRIPE_PUBLISHABLE_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
@@ -55,6 +81,7 @@ def checkout(request):
             
             messages.info(request, 'Payment successful! \r You will receive an email with the order details.')
             request.session["cart"] = {}
+            send_confirmation_email(order)
 
             if request.user.is_authenticated:
                 account = UserAccount.objects.get(user=request.user)
@@ -135,5 +162,4 @@ def checkout(request):
     }
 
     return render(request, template, context)
-
 

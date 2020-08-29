@@ -1,0 +1,17 @@
+Dear {{ order.first_name }}, thank you for your purchase!
+We've received your order and your package will be shipped asap.
+
+Order Summary
+Order n°: {{ order.order_number }}
+Shipping Cost: {{ order.delivery_cost }}
+Grand Total: ${{ order.grand_total }}
+
+Shipping address
+{{ order.street_address1 }}
+{{ order.town_or_city }}
+{{ order.country }}
+
+If you have any questions, feel free to contact us at {{ contact_email }}.
+
+Sincerely,
+The Yellow Dice
