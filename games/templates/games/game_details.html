@@ -11,16 +11,11 @@
 		<!-- Game Image -->
 		<div class="col-12 col-sm-6">
             {% if game.image %}
-                {% if 'USE_AWS' in os.environ %}
-                    <img class="img-fluid" src="{{ game.image.url }}" alt="{{ game.name }}">
-                {% else %}
-                    <img class="img-fluid" src="{{ STATIC_MEDIA }}{{ game.image.url }}" alt="{{ game.name }}">
-                {% endif %}
+                <img class="img-fluid" src="{{ game.image.url }}" alt="{{ game.name }}">
             {% else %}
-	    		<img class="img-fluid" src="{{ STATIC_URL }}images/misc/no_image.jpg" alt="{{ game.name }}">
+                <img class="img-fluid" src="{{ STATIC_URL }}images/misc/no_image.jpg" alt="{{ game.name }}">
             {% endif %}
         </div>
-
         <!-- Rating and Price -->
         <div class="col-12 col-sm-6">
             <div class="d-flex mt-5">

@@ -12,20 +12,14 @@
 
 	{% for item in cart_items %}
 	<div class="row justify-content-center bg-white cart-item game-section mt-5">
-
-		<div class="col-12 col-lg-3">
-			<!-- Clicking here should return to the details page -->
-                {% if item.game.image %}
-                    {% if 'USE_AWS' in os.environ %}
-                        <img class="img-fluid" src="{{ item.game.image.url }}" alt="{{ item.game.name }}">
-                    {% else %}
-                        <img class="img-fluid" src="{{ STATIC_MEDIA }}{{ item.game.image.url }}" alt="{{ item.game.name }}">
-                    {% endif %}
-                {% else %}
-			<img class="img-fluid" src="{{ STATIC_URL }}images/misc/no_image.jpg" alt="{{ item.game.name }}">
+        <!-- Game image, clicking here returns to the details page -->
+		<a class="col-12 col-lg-3" href="{% url 'game_details' item.game.id %}">
+            {% if item.game.image %}
+                <img class="img-fluid" src="{{ item.game.image.url }}" alt="{{ item.game.name }}">
+            {% else %}
+                <img class="img-fluid" src="{{ STATIC_URL }}images/misc/no_image.jpg" alt="{{ item.game.name }}">
             {% endif %}
-        </div>
-
+        </a>
         <div class="col-12 col-lg-6">
             <h4 class="section-header">{{ item.game.name }}</h4>
             <p class="d-inline">Subtotal: </p>
