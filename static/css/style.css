@@ -25,6 +25,10 @@ body { font-family: 'Roboto', sans-serif; }
     font-weight: 500;
 }
 
+p {
+    font-size: 18px;
+}
+
 /* --------- Color Palette -------- */
 
 .text-blue { color: #1F96F4; }
@@ -175,10 +179,6 @@ main {
     height: calc(33vh - 60px);
 }
 
-header p {
-    font-size: 18px;
-}
-
 /* ---------- Game Cards ---------- */
 
 .game-card {
@@ -245,6 +245,10 @@ header p {
     position: relative; 
     bottom: 2px;
 }
+
+.toggle-order-items{display:inline}
+.btn-text:not(.collapsed)  span{display:none}
+.btn-text.collapsed b {display:none}
 
 /* ------------ Footer ------------ */
 

@@ -12,17 +12,56 @@
 			<form class="" action="{% url 'account' %}" method="POST" id="account-update-form">
 
 				<!-- Oders -->
-				{% if orders%}
-                    {% for order in orders %}
-                    <p>{{order}}</p>
-                    {% endfor %}
+				{% if orders %}
+
+				{% for order in orders %}
+				<div class="row game-section justify-content-center mt-3 p-2">
+
+					<div class="col-12 text-center">
+						<strong><p class="d-inline">N°</p></strong>
+						<p class="text-muted d-inline">{{ order.order_number | truncatechars:23}}</p>
+					</div>
+
+					<div class="col-12 col-lg-4 text-center">
+						<strong><p class="d-inline">Date</p></strong>
+						<p class="d-inline">{{ order.date | truncatechars:11}}</p>
+					</div>
+
+					<div class="col-12 col-lg-4 text-center">
+						<strong><p class="d-inline">Items</p></strong>
+						<a class=" toggle-order-itemsd-inline" href="#collapse{{ order.order_number }}" data-toggle="collapse" role="button"
+					aria-expanded="false">{{ order.lineitems.all | length }}</a>
+					</div>
+
+					<div class="col-12 col-lg-4 text-center">
+						<strong><p class="d-inline">Total</p></strong>
+						<p class="d-inline">€ {{ order.order_total }}</p>
+					</div>
+
+					<div id="collapse{{ order.order_number }}" class="col-12 col-6 collapse">
+						<ul>
+							{% for item in order.lineitems.all %}
+							<li>{{ item.quantity }} x {{ item.game.name }}</li>
+							{% endfor %}
+						</ul>
+					</div>
+
+				</div>
+
+				{% endfor %}
+
 				{% else %}
-				    <h4 class="section-header" class="my-5">You haven't placed any orders yet :|</h4>
-                {% endif %}
+				<h4 class="section-header" class="my-5">You haven't placed any orders yet :|</h4>
+				{% endif %}
+
 
 				<!-- Buttons -->
-				<div class ="text-center"><a href="{% url 'games'%}" type="button" id="viewAllGames"
-					class="btn btn-success btn-rounded btn-lg px-4">View All Games</a></div>
+				<div class="text-center">
+					<a href="{% url 'games'%}" type="button" id="viewAllGames"
+						class="btn btn-success btn-rounded btn-lg px-4">
+						View All Games
+					</a>
+				</div>
 
 
 			</form>
