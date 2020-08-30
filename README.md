@@ -37,3 +37,8 @@ An ecommerce website that sells tapletop games made with Django
     - [**Acknowledgments**](#acknowledgments)
 
 8. [**Disclaimer**](#disclaimer)
+
+
+### Wireframes  
+  
+The wireframes were created using [Figma](https://www.figma.com/) and can be found [here](https://www.figma.com/file/c22Y7U3hy37bp4gazuvnpb/Forth-Milestone-Project?node-id=0%3A1.
