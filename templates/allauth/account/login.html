@@ -5,11 +5,9 @@
 
 {% block head_title %}{% trans "Sign In" %}{% endblock %}
 
-{% block content %}
+{% block inner_content %}
 
-<h1>{% trans "Sign In" %}</h1>
-
-<h2>TESTING</h2>
+<h1 class="page-header text-left">{% trans "Sign In" %}</h1>
 
 {% get_providers as socialaccount_providers %}
 
@@ -31,7 +29,7 @@ for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
 {% include "socialaccount/snippets/login_extra.html" %}
 
 {% else %}
-<p>{% blocktrans %}If you have not created an account yet, -test- then please
+<p>{% blocktrans %}If you have not created an account yet, then please
 <a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}</p>
 {% endif %}
 
