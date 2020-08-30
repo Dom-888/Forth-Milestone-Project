@@ -15,7 +15,8 @@
 				{% if orders %}
 
 				{% for order in orders %}
-				<div class="row game-section justify-content-center mt-3 p-2">
+				<a class="row game-section justify-content-center mt-3 p-2 text-decoration-none user-order" href="#collapse{{ order.order_number }}" data-toggle="collapse" role="button"
+					aria-expanded="false">
 
 					<div class="col-12 text-center">
 						<strong><p class="d-inline">N°</p></strong>
@@ -29,8 +30,7 @@
 
 					<div class="col-12 col-lg-4 text-center">
 						<strong><p class="d-inline">Items</p></strong>
-						<a class=" toggle-order-itemsd-inline" href="#collapse{{ order.order_number }}" data-toggle="collapse" role="button"
-					aria-expanded="false">{{ order.lineitems.all | length }}</a>
+						<p class="d-inline">{{ order.lineitems.all | length }}</p>
 					</div>
 
 					<div class="col-12 col-lg-4 text-center">
@@ -46,7 +46,7 @@
 						</ul>
 					</div>
 
-				</div>
+				</a>
 
 				{% endfor %}
 

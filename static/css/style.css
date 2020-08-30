@@ -246,9 +246,15 @@ main {
     bottom: 2px;
 }
 
-.toggle-order-items{display:inline}
-.btn-text:not(.collapsed)  span{display:none}
-.btn-text.collapsed b {display:none}
+/* -------- Order History --------- */
+
+.user-order {
+    color: #000;
+}
+
+.user-order:hover {
+    color: inherit;
+}
 
 /* ------------ Footer ------------ */
 
