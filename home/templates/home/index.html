@@ -4,7 +4,7 @@
 {% block content %}
 
 <!-- Hero Carousel -->
-<div id="heroSlide" class="carousel slide data-ride="carousel">
+<div id="heroSlide" class="carousel slide" data-ride="carousel">
 	<div class="carousel-inner">
 		<div class="carousel-item active">
 			<img class="d-block w-100" src="{% static 'images/carousel/risk.jpg' %}" alt="Risk">
@@ -39,7 +39,7 @@
         decision making, higher level strategic thinking, and problem solving. This is why at The
         Yellow Dice we provide a wide range of tabletop games, from the great classics to the latest
         news. Delivery all over Ireland, UK and Europe!</p>
-        <a href="{% url 'games'%}" type="button" id="viewAllGames"
+        <a href="{% url 'games'%}" id="viewAllGames"
         class="btn btn-success btn-rounded btn-lg px-4">View All Games</a>
     </div>
 </header>
