@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 /* ---------- Typography ---------- */
 
 /* Google Fonts */
@@ -42,8 +49,6 @@ p {
 
 .text-lgray { color: #E5E5E5; }
 .bg-lgray { background-color: #E5E5E5; }
-
-/* -------- Bootstrap Grid -------- */
 
 /* ------------ Buttons ----------- */
 
@@ -115,6 +120,8 @@ nav a {
 
 nav a:hover {
     color: #FFD700 !important;
+    -webkit-transition: all 0.4s ease 0s;
+    -o-transition: all 0.4s ease 0s;
     transition: all 0.4s ease 0s;
     background-color: transparent !important;
 }
@@ -134,6 +141,8 @@ nav li {
 
 #searchbar .feather:hover {
     color: #696969 !important;
+    -webkit-transition: all 0.4s ease 0s;
+    -o-transition: all 0.4s ease 0s;
     transition: all 0.4s ease 0s;
 }
 
@@ -154,10 +163,8 @@ main {
     background-color: #fff;
     border-radius: 10px;
     -webkit-box-shadow: 6px 6px 5px -2px rgba(0,0,0,0.75);
-    -moz-box-shadow: 6px 6px 5px -2px rgba(0,0,0,0.75);
     box-shadow: 6px 6px 5px -2px rgba(0,0,0,0.75);
 }
-
 
 /* ----------- Home Page ---------- */
 
@@ -168,7 +175,8 @@ main {
 .carousel-item img {
     height: 100%;
     background-position: center 50%;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
 }
 
 #logo img {
@@ -178,11 +186,16 @@ main {
 /* ---------- Game Cards ---------- */
 
 .game-card {
-    transition: transform .2s;
+    -webkit-transition: -webkit-transform .2s;
+    transition: -webkit-transform .2s;
+    -o-transition: transform .2s;
+    transition: transform .2s, -webkit-transform .2s;
 }
 
 .game-card:hover {
-    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+            transform: scale(1.05);
 }
 
 .card-header {
@@ -200,11 +213,12 @@ main {
 }
 
 .y-center {
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 /* --------- Details Page --------- */
-
 
 .input-qty {
     width: 50px;
@@ -217,8 +231,12 @@ main {
 /* ------------- Cart ------------- */
 
 .cart-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding: 1em;
 }
 
@@ -269,6 +287,8 @@ footer {
 
 .footer-icon:hover {
     color: #FFD700 !important;
+    -webkit-transition: all 0.4s ease 0s;
+    -o-transition: all 0.4s ease 0s;
     transition: all 0.4s ease 0s;
 }
 
