@@ -7,7 +7,6 @@ An ecommerce website that sells tapletop games made with Django
 ## Table of Contents
 1. [**UX**](#ux)
     - [**User Goals**](#user-goals)
-    - [**Business Goals**](#business-goals)
     - [**User Stories**](#user-stories)
     - [**Design Choices**](#design-choices)
     - [**Wireframes**](#wireframes)
@@ -47,8 +46,8 @@ An ecommerce website that sells tapletop games made with Django
 | As a user of the site, I want to be able to:                                                                     | The Yellow Dice meets these needs by:                                                                           |
 |------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|
 | Easily understand how to use the site.                                                                           | Having a clear user interface and providing visual feedback to user actions.                                    |
-| Choose between various categories of board games.                                                                | Allowing to browse through 4 game categories: Board Games, Cards, Abstract and, Mash-Up.                        |
-| Search the site for a specific feature or game element, for example cards or dice.                               | Having a search function that goes through the game title, its description and the objects included in the box. |
+| Choose between various categories of tabletop games.                                                             | Allowing to browse through 4 game categories: Board Games, Cards, Abstract and, Mash-Up.                        |
+| Search the site for a specific feature or game element, for example cards or dice.                               | Having a search function that goes through the game title, its description and the items included in the box.   |
 | Choose games similar to those I already know and have enjoyed.                                                   | Suggesting a list of similar games each time the user selects a game.                                           |
 | Use the site from my smartphone as well as my tablet and my laptop.                                              | Being fully responsive, having been created following the mobile-first approach.                                |
 | Register an account with my shipping details so that I don't have to re-enter them every time I make a purchase. | Providing a form in which to enter or modify relevant information.                                              |
@@ -56,11 +55,31 @@ An ecommerce website that sells tapletop games made with Django
 | Complete each purchase quickly and easily.                                                                       | Providing a minimal checkout page with no distractions that can divert the user's attention.                    |
 | See my order history.                                                                                            | Providing a detailed list of orders placed.                                                                     |
 
-### Business Goals
-
 ### User Stories
 
 ### Design Choices
+
+#### Fonts  
+All fonts are from [Google Fonts](https://fonts.google.com/).  
+- _Roboto_: Site main font, it was chosen for its clear and straight design.  
+- _Roboto Slab_: A more stylized version of Roboto, used in page headers.
+- _Righteous_: Used in the logo, chosen for its distinctiveness and ease of reading.
+
+#### Color Palette
+The site uses light, pastel colors with good contrast between them.
+- _Gold Yellow (#FFD700)_: Chosen to create the logo, also used to highlight the hovered navbar elements.
+- _Sky Blue (#1F96F4)_: Used for the navbar, footer, and logo background, it was chosen to create a nice contrast with the yellow of the logo.
+- _Light Gray (#E5E5E5)_: Used for the site background.
+- _Dark Gray (#99999)_: Used for the placeholder text in forms and searchbar.  
+- _Bootstrap Green (#5cb85c)_: Used for most of the buttons on the site
+- _Bootstrap Red (#d9534f)_: Used for the "remove from cart" buttons.
+
+#### Icons  
+All icons are from [Feather Icons](https://feathericons.com/).  
+- _Cart Icon_: The cart icon is easily reachable from any part of the site, being placed in the right corner of the navbar, as it is conventionally used in this type of site and is where the user expects to find it.
+- _Cart Operations_: Icons are used to manage cart operations (add item, change quantity, and delete item), with easily recognizable symbols that communicate their meaning in a more intuitive way than the written text. 
+- _Site Navigation_: Icons have also been added to navigation buttons as visual clues to facilitate site navigation.
+- _Social Media Icons_: Placed in the footer to give access to the 3 main social media: Facebook, Instagram, and Twitter.
 
 ### Wireframes  
   
@@ -120,3 +139,46 @@ The wireframes were created using [Figma](https://www.figma.com/) and can be fou
 - [Paint.net](https://www.getpaint.net/) to simple image manipulation.
 - [Visual Studio Code](https://code.visualstudio.com/) for testing snippet of JS code.
 - [Spyder](https://www.spyder-ide.org/) for testing snippet of Python code.  
+
+
+## Testing  
+  
+### Tested Devices  
+The website has been successfully tested with the following devices, plus all those simulated by the [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools).    
+  
+```  
+| -----------|---------------------------- |------------------------------|  
+| Type       | Device                      | Browsers                     |  
+| -----------|---------------------------- |------------------------------|  
+| Laptop     | Asus FX753VD                | Chrome, Firefox, Edge, Opera |  
+| Smartphone | Lenovo Moto G5S Plus        | Chrome, Firefox              |  
+| Smartphone | Samsung Galaxy note 10 plus | Chrome                       |  
+| Smartphone | Samsung Galaxy s9           | Chrome                       |  
+| Smartphone | Samsung Galaxy a50          | Firefox Focus                |  
+| Smartphone | Asus ZenFone 4 max          | Chrome                       |  
+| Smartphone | Apple iPhone 7              | Safari                       |  
+| -----------|---------------------------- |------------------------------|  
+```  
+  
+### Manual Testing
+  
+### Validation services  
+  
+### Bugs Discovered  
+
+## Deployment  
+  
+### How to run this project locally  
+  
+## Credits  
+  
+### Code  
+  
+### Media  
+  
+### Acknowledgments 
+
+<br>  
+  
+#### Disclaimer  
+  
