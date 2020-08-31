@@ -203,6 +203,10 @@ main {
   text-decoration: none;
 }
 
+.y-center {
+    align-items: center;
+}
+
 /* --------- Details Page --------- */
 
 
