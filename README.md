@@ -68,10 +68,10 @@ Browsing the Mashup section of the _The Yellow Dice_ I discover _Clue: The Offic
 _The Yellow Dice_ allows me to complete the purchase without having to register an account as it is unlikely that I will purchase another game in the short term.
 
 - I'm looking for a gift to buy for my grandchildren but I'm not a tech-savvy person and I need a simple site to use.
-After landing on The Yellow Dice, the Site introduction confirms my idea that a tabletop game is the right choice.
-The text is bigger than the average with a clear font and a good contrast with the background making it very easy to read.
+After landing on _The Yellow Dice_, the Site introduction confirms my idea that a tabletop game is the right choice.
+The text is bigger than the average with a clean font and a good contrast between characters and background making it very easy to read.
 After choosing the game, a pop-out message guides me to the checkout page,
-Here the buying process is simple and straightforward: there are no distracting elements on the page, I just have to fill the form and click on the large "Buy" Button.
+here the buying process is simple and straightforward: there are no distracting elements on the page, I just have to fill the form and click on the large "Buy" Button.
 Finally, a confirmation email assures me that the purchase was successful.
 
 ### Design Choices
@@ -80,7 +80,7 @@ Finally, a confirmation email assures me that the purchase was successful.
 All fonts are from [Google Fonts](https://fonts.google.com/).  
 - _Roboto_: Site main font, it was chosen for its clear and straight design.  
 - _Roboto Slab_: A more stylized version of Roboto, used in page headers.
-- _Righteous_: Used in the logo, chosen for its distinctiveness and ease of reading.
+- _Righteous_: Used in the logo, chosen for its distinctiveness.
 
 #### Color Palette
 The site uses light, pastel colors with good contrast between them.
@@ -193,9 +193,100 @@ The website has been successfully tested with the following devices, plus all th
   
 ### Bugs Discovered  
 
-## Deployment  
-  
-### How to run this project locally  
+## Deployment
+
+### How to run this project locally
+
+In case you want to pull the code from my Github repository:  
+1. Log in to Github,  
+
+2. Follow [this](https://github.com/Dom-888/Forth-Milestone-Project) link to the project repository.  
+
+3. In the repository page, click **Clone or download ▼**.  
+
+4. To clone the repository using HTTPS, under "Clone with HTTPS", click the clipboard icon. To clone the repository using an SSH key, including a certificate issued by your organization's SSH certificate authority, click **Use SSH**, then click the clipboard icon.  
+
+5. Open Git Bash.  
+
+6. Change the current working directory to the location where you want the cloned directory to be made.  
+
+7. Type `git clone`, and then paste the URL you copied in Step 3.  
+
+8. Install all required modules with the command:
+```
+pip -r requirements.txt.
+```
+
+9. Go on [Stripe](https://dashboard.stripe.com/register) and register a free account.
+
+10. In the Stripe dashboard, click on **Get your test API keys** and copy both the Publishable Key and Secret Key. (Note that the Publishable Key can be committed to the repository without any problems, The Secret Key however must never be made public.)
+
+11. In the project main directory create a file called `env.py`.
+
+12. Inside the env.py file import os and create two variables: STRIPE_PUBLISHABLE_KEY and STRIPE_SECRET_KEY, assign them the respective strings taken from the Stripe dashboard.
+The final content of your env.py should look like this:
+
+```
+import os
+
+os.environ["STRIPE_PUBLISHABLE_KEY"] = "pk_test_..." 
+os.environ["STRIPE_SECRET_KEY"] = "sk_test_..." 
+
+````
+
+13. You can now run the application with the command:
+```
+python manage.py runserver
+```
+
+14. The site can be visited at `http://127.0.0.1:8000/`
+
+## Heroku Deployment
+
+To deploy the project on Heroku, take the following steps:
+
+1. Sign In on Heroku or create a new account
+
+4. Create a new app on the [Heroku website](https://dashboard.heroku.com/apps) by clicking the "New" button in your dashboard. Give it a name and set the region to the one closest to you, then click the "Create app" button.
+
+3. Push the project to GitHub.
+
+5. In the Heroku dashboard, click on resources and search for "Heroku Postgres" and click on **Provision**.
+
+4. Go on [AWS](https://aws.amazon.com/) and create a free account.
+
+5. [Set up an S3 bucket](https://docs.aws.amazon.com/AmazonS3/latest/gsg/CreatingABucket.html) on [AWS](https://aws.amazon.com/), after creating the bucket you should be able to download a .csv file with 2 secret keys which you will need later.
+
+6. Make a copy of the media folder of your project inside the bucket.
+
+7. Create a new Gmail account or set up an existing one. In the Google account setting click on security and activate the 2-step verification. Return back in the security page and click on **App password**, you'll get a 16 character password which you'll need later. It is possible to use a provider other than Gmail, but the procedure will be different.
+
+8. Go on [this](https://miniwebtool.com/django-secret-key-generator/) link and generate a new secret key for your Django app.
+
+5. From the heroku dashboard of your newly created application, click on **Settings** -> **Reveal Config Vars** and set as the following:
+
+| KEY                    | VALUE                                                                 |
+|------------------------|-----------------------------------------------------------------------|
+| AWS_ACCESS_KEY_ID      | <Same as the AWS .csv file>                                           |
+| AWS_SECRET_ACCESS_KEY  | <Same as the AWS .csv file>                                           |
+| DATABASE_URL           | <Automatically set by Heroku>                                         |
+| DISABLE_COLLECTSTATIC  | 1                                                                     |
+| EMAIL_HOST_PASS        | <The 16 character gmail password for apps>                            |
+| EMAIL_HOST_USER        | <The new gmail address>                                               |
+| SECRET_KEY             | <Your Django secret key>                                              |
+| STRIPE_PUBLISHABLE_KEY | <Same as your env.py>                                                 |
+| STRIPE_SECRET_KEY      | <Same as your env.py>                                                 |
+| USE_AWS                | True                                                                  |
+| DEVELOPMENT            | <Optional, without this variable, each error will return a 404 page.> |
+
+
+10. Migrate the database models in your new database.
+
+10. Create your superuser account in your new database.
+  
+9. In your heroku dashboard, click **Deploy**. Scroll down to **Manual Deploy**, select the master branch then click **Deploy Branch**.
+
+10. Once the build is complete, click the **Open app** button. 
   
 ## Credits  
   
