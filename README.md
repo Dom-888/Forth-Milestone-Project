@@ -1,6 +1,8 @@
 # [The Yellow Dice](https://the-yellow-dice.herokuapp.com/)
 
-An eCommerce website for tabletop games, made with Django
+An eCommerce website for tabletop games, made with Django.
+<br>
+A live preview of the the website can be found [here](https://the-yellow-dice.herokuapp.com/).
 
 !["Responsive Representation"](static/images/misc/responsive-representation.png "Responsive Representation")
 
@@ -24,7 +26,7 @@ An eCommerce website for tabletop games, made with Django
     - [**Validation Services**](#validation-services)
     - [**Bugs Discovered**](#bugs-discovered)
 
-### 
+
 
 6. [**Deployment**](#deployment)
     - [**How to run this project locally**](#how-to-run-this-project-locally)
@@ -161,11 +163,8 @@ A feature commonly used by Amazon and many other sites which guide the users in 
 Can be implemented with Alluath and allows and greatly increase the chance of the user signing up to the site.
 
 #### Wishlist
-Can be handled by a Django model containing the object: user_id, product_id. This feature can increase the chance of wishlisted products being sold in the future and can help the business owner to anticipate stock levels.
+Can be handled by a model containing the object: user_id, product_id. This feature can increase the chance of wishlisted products being sold in the future and can help the business owner to anticipate stock levels.
 
-### Existing Features
-
-### Features Left to Implement
 
 ## Technologies Used
   
@@ -208,6 +207,7 @@ Can be handled by a Django model containing the object: user_id, product_id. Thi
 - [Stripe](https://stripe.com/en-ie) as payment platform to validate and accept credit card payments securely.
 - [AWS S3](https://aws.amazon.com/) to store images and static files.
 - [BrowserStack](https://www.browserstack.com/) to test multiple devices and browsers.
+- [Hatchful](https://hatchful.shopify.com/) to create the logo.
 - [Am I Responsive?](http://ami.responsivedesign.is/) to take the [screenshot](#open-trailer) placed at the beginning of this document. 
 
 #### Software
@@ -244,8 +244,79 @@ The website has been successfully tested with the following devices, plus all th
 | Tablet     | iPad Pro 11                 | Safari   |  
 | Tablet     | iPad Air 2                  | Safari   |  
 
-  
 ### Manual Testing
+
+#### Navbar
+
+- Hover over each link in the navbar to confirm that the color change as expected.
+- Click the categories link in the navbar, confirm that all categories are displayed in the dropdown menu.
+- Clicked each other link in the navbar to confirm that it leads to the correct page.
+- Confirm that when logged out the options "Sign Up" and "Log In" are visible and that "Account", "Inventory" and "Log out" are not.
+- Log into the site as superuser, confirm that the options "Inventory", "Account" and "Log out" are visible and that "Sign Up" and "Log in" are not.
+- Log into the site as regular, confirm that the options "Account" and "Log out" are visible and that "Sign Up", "Inventory" and "Log in" are not.
+- Log Out from the site, confirm that the options "Sign Up" and "Log in" are visible and that "Account", "Log out" and "Inventory" are not.
+- Add an or more item to the cart, confirm that the counter next to the shopping cart icon shown the correct number.
+- Remove an or more item from the cart, confirm that the counter next to the shopping cart icon shown the correct number.
+- Remove all the items from the cart, confirm that the counter next is not shown.
+
+#### Home Page
+
+- Click on the carousel slider buttons, confirm that they work as expected.
+- Resize the page, confirm the carousel images are always cropped and never stretched.
+- Resize the page, confirm the site banner is always cropped and never stretched.
+- Hover over "All Games" buttons, confirm its color become darker.
+- Click on "All Games" button, confirm it takes the user to the games pages and that here all the games are displayed.
+
+#### Games Page
+
+- Hover over each game preview to confirm the hover effects work as expected.
+- Resize the page, confirm the appropriate number of previews are displayed on each row.
+- Click on different previews multiple times, confirm they always take the user to the correct pages.
+
+#### Details Page (Game Details)
+- Resize the page, confirm all the elements arrange themselves in an expected way without overlapping.
+- Add one item to the cart, confirm the cart preview is shown with the expected content.
+- Add multiple items to the cart, confirm the cart preview is shown with the expected content.
+
+#### Details Page (Similar Games)
+- Confirm the previews shown actually belong to the expected category.
+- Hover over each game preview to confirm the hover effects work as expected.
+- Resize the page, confirm the appropriate number of previews are displayed on each row.
+- Click on different previews multiple times, confirm they always take the user to the correct pages.
+
+#### Shopping Cart
+- Reach the cart page with the cart empty, confirm that the appropriate message is shown and the "All Games" button is present.
+- Click on "All Games" button, confirm it takes the user to the games pages and that here all the games are displayed.
+- Add multiple items to the cart and return to the cart page, confirm that all items in the cart are displayed correctly, with the correct amounts requested by the user and the "Checkout" button is present.
+- Click on the "Checkout" button, confirm its takes the user to the checkout page and the grand total is correct.
+- Click on the item image, confirm that the user is taken on the details page of the correct game.
+- Adjust the quantity field, confirm that both the product subtotal and the cart grand total are updated.
+- Remove an item from the cart, confirm that the cart page is reloaded and the item is not present anymore, also confirm that the cart grand total is updated.
+- Delete all items from the cart, confirm that the cart page is reloaded and the appropriate message and button are present.
+
+#### Checkout Page
+- Click on the "Buy" button without completing all required fields, confirm that an error message is shown.
+- Click on the "Buy" button completing all required fields, confirm that order is correctly processed by both Django and Stripe.
+- Reach the page with empty cart (from the address bar), confirm that the error message is shown and that the user is taken to the games page.
+- Reach the page as an unregistered user, confirm that the message "Create an account or log in to save this information" is shown.
+- Reach the page as a registered user, confirm that the message "Save this delivery information to my profile" is shown.
+- Confirm that registered users can actually save/update their information by completing an order.
+- Confirm that the "return to Cart" works as expected.
+
+#### Personal Information Page
+- Confirm that the username is displayed correctly at the top of the page.
+- Fill in the form and click on the "Save" button, then reload the page, confirm that the new information is actually saved.
+- Confirm that the information saved in this form is used to prefill the checkout page and vice versa.
+- Click on "Order History" button, confirm it takes the user to the Order History Page.
+
+
+#### Order History
+- Confirm that the username is displayed correctly at the top of the page.
+- Enter the page as a user who has never made a purchase, confirm that the appropriate message is shown
+- Complete multiple purchases, confirm that each new order appears on the page at the top of the list.
+- Click on an order, confirm that the details of it are shown, click again, confirm that the details are hidden.
+- Click on "All Games" button, confirm it takes the user to the games pages and that here all the games are displayed.
+- Click on "Personal Information" button, confirm it takes the user to the Personal Information Page.
   
 ### Validation services  
   
