@@ -416,13 +416,23 @@ To deploy the project on Heroku, take the following steps:
 
 10. Once the build is complete, click the **Open app** button. 
   
-## Credits  
-  
-### Code  
-  
-### Media  
-  
-### Acknowledgments 
+## Credits
+
+### Code
+
+- Some views and models are taken from [Boutique Ado](https://github.com/ckz8780/boutique_ado_v1) from [Code Institute](https://codeinstitute.net/).     
+- The Return-to-top Button is from [W3Schools](https://www.w3schools.com/howto/howto_js_scroll_to_top.asp).  
+
+### Media
+
+- The pictures used in the carousel are from [Pinterest](https://www.pinterest.it/)
+- The pictures used in the products are from [Amazon](https://www.amazon.com/) and [BoardGamer.ie](https://www.boardgamer.ie/). 
+
+### Acknowledgments
+
+- I received assistance, feedback and encouragement from my mentor [Seun Owonikoko](https://github.com/seunkoko).  
+- I received help and suggestions from [Code Institute](https://codeinstitute.net/) tutors.  
+- The project code has been reviewed by the [Code Institute](https://codeinstitute.net/) Slack community.  
 
 <br>  
   
