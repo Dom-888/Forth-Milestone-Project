@@ -1,6 +1,6 @@
 # [The Yellow Dice](https://the-yellow-dice.herokuapp.com/)
 
-An ecommerce website that sells tapletop games made with Django
+An eCommerce website for tabletop games, made with Django
 
 !["Responsive Representation"](static/images/misc/responsive-representation.png "Responsive Representation")
 
@@ -156,6 +156,18 @@ The website has been successfully tested with the following devices, plus all th
 | Smartphone | Samsung Galaxy a50          | Firefox Focus                |  
 | Smartphone | Asus ZenFone 4 max          | Chrome                       |  
 | Smartphone | Apple iPhone 7              | Safari                       |   
+
+### Simulated Devices
+
+[BrowserStack](https://www.browserstack.com/): was used to test the website on the following simulated devices:
+
+| Type       | Device                      | Browsers |       
+| -----------|---------------------------- |----------|  
+| Smartphone | Galaxy Note 9               | Chrome   |  
+| Tablet     | Galaxy Tab S6               | Chrome   |  
+| Smartphone | iPhone 11                   | Safari   |  
+| Tablet     | iPad Pro 11                 | Safari   |  
+| Tablet     | iPad Air 2                  | Safari   |  
 
   
 ### Manual Testing
