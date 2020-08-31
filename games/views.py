@@ -52,11 +52,7 @@ def all_games(request):
 def game_details(request, game_pk):
 
     game = get_object_or_404(Game, pk=game_pk)
-
-    # All the other games in the same category
     games = Game.objects.filter(category=game.category).exclude(pk = game_pk)
-    
-    # The instance of Included whose foreign key is the same as the selected Game instance
     included = Included.objects.filter(game=game_pk)
 
     context = {
