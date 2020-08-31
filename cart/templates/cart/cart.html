@@ -5,11 +5,9 @@
 {% block content %}
 
 <div class="container text-center">
-
 	<h1 class="page-header">Shopping Cart</h1>
 
 	{% if cart_items %}
-
 	{% for item in cart_items %}
 	<div class="row justify-content-center bg-white cart-item game-section mt-5">
         <!-- Game image, clicking here returns to the details page -->
@@ -26,7 +24,6 @@
             <p class="d-inline price">€{{ item.game.price | calc_subtotal:item.quantity}}</p>
             <p class="text-lgray">{{ item.game.sku }}</p>
         </div>
-
         <div class="col-6 col-lg-2 h-80px">
             <p>Quantity:</p>
             <form action="{% url 'update_cart_item_quantity' item.item_id %}" method="POST" class="d-flex">
@@ -42,17 +39,15 @@
                     <button type="submit" class="btn btn-success btn-rounded btn-cart-item"><i data-feather="edit-3"></i></button>
                 </div>
             </form>
-
         </div>
-
         <div class="col-6 col-lg-1 h-80px">
             <p>Remove:</p>
             <a type="button" class="btn btn-danger btn-rounded btn-cart-item"
                 href="{% url 'remove_cart_item' item.item_id %}"><i data-feather="trash-2"></i></a>
         </div>
 	</div>
-
 	{% endfor %}
+
     <div>
         <div>
             <h5 class="mt-4">Total: €{{ total|floatformat:2 }}</h5>
@@ -67,19 +62,16 @@
                 <strong>Grand Total: €{{ grand_total|floatformat:2 }}</strong>
             </h4>
             {% if free_delivery_delta > 0 %}
-            <p class="d-inline">
-                Buy more
-                <p class="price d-inline">€{{ free_delivery_delta }}</p>
-                to get free shipping!
-            </p>
+            <p class="d-inline">Buy more</p>
+            <p class="price d-inline">€{{ free_delivery_delta }}</p>
+            <p class="d-inline">to get free shipping! </p>
             {% endif %}
         </div>
     </div>
 
     <div>
-        <a href="{% url 'checkout' %}" type="button" id="checkout" class="btn btn-success btn-rounded btn-lg px-4 mb-3">Checkout</a>
+        <a href="{% url 'checkout' %}" type="button" id="checkout" class="btn btn-success btn-rounded btn-lg px-4 my-3">Checkout</a>
     </div>
-
 
     {% else %}
     <h4 class="mb-5 section-header">Your cart is empty, sad and lonely :(</h4>

@@ -1,7 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
 
-
 {% block content %}
 <div class="container">
 	<h1 class="overflow-hidden page-header">{{user_name}}'s Order History</h1>
@@ -10,10 +9,8 @@
 			<a href="{% url 'account' %}" class="btn btn-primary btn-lg btn-rounded bg-blue border-0 w-100">Go to
 				Personal Information</a>
 			<form class="" action="{% url 'account' %}" method="POST" id="account-update-form">
-
 				<!-- Oders -->
 				{% if orders %}
-
 				{% for order in orders %}
 				<a class="row game-section justify-content-center mt-3 p-2 text-decoration-none user-order" href="#collapse{{ order.order_number }}" data-toggle="collapse" role="button"
 					aria-expanded="false">
@@ -45,15 +42,12 @@
 							{% endfor %}
 						</ul>
 					</div>
-
 				</a>
-
 				{% endfor %}
 
 				{% else %}
 				<h4 class="section-header" class="my-5">You haven't placed any orders yet :|</h4>
 				{% endif %}
-
 
 				<!-- Buttons -->
 				<div class="text-center">
@@ -62,8 +56,6 @@
 						View All Games
 					</a>
 				</div>
-
-
 			</form>
 		</div>
 	</div>
