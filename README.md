@@ -46,7 +46,7 @@ An eCommerce website for tabletop games, made with Django
 | As a user of the site, I want to be able to:                                                                     | The Yellow Dice meets these needs by:                                                                           |
 |------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|
 | Easily understand how to use the site.                                                                           | Having a clear user interface and providing visual feedback to user actions.                                    |
-| Choose between various categories of tabletop games.                                                             | Allowing to browse through 4 game categories: Board Games, Cards, Abstract and, Mash-Up.                        |
+| Choose between various categories of tabletop games.                                                             | Allowing to browse through 4 game categories: Board Games, Cards, Abstract and, Mashup.                         |
 | Search the site for a specific feature or game element, for example cards or dice.                               | Having a search function that goes through the game title, its description and the items included in the box.   |
 | Choose games similar to those I already know and have enjoyed.                                                   | Suggesting a list of similar games each time the user selects a game.                                           |
 | Use the site from my smartphone as well as my tablet and my laptop.                                              | Being fully responsive, having been created following the mobile-first approach.                                |
@@ -104,6 +104,64 @@ The wireframes were created using [Figma](https://www.figma.com/) and can be fou
 
 
 ## Features
+
+### Existing Features  
+
+#### Navbar
+- _Site Logo_: If clicked, takes the user back to the home page.
+- _Search Bar_: Allows the user to search the database through the game title, its description or the objects included in the box (such as cards and dice). 
+- _Categories Menu_: From here you can access the 4 categories into which the games on the site are divided (Board Games, Cards, Abstract and, Mashup)
+- _Access Links_: Signup, Login and Log Out handled by Django Allauth
+- _Account Info_: Allows to modify the shipping information and visualize the order history.
+- _Inventory_: Accessible only to the staff of the site, it shows the Django panel where it's possible to add, modify or delete the products in the inventory.
+- _Cart_: Allows to access the cart, shows a number with the objects contained in it.
+
+#### Home page
+- _Hero Carousel_: Features 4 high-quality slides of games in progress, used to catch the user's attention. Occupies two-thirds of the screen height in all viewports.
+- _Site Banner_: Made with the main colors of the site and a distinctive font. Occupies one-third of the screen height in all viewports.
+- _Site Intro_: A concise introduction to the website.
+- _"All Games" Button_: Large call-to-action button, shows a page containing all the games in the store.
+
+#### Products Page
+- _Games Previews_: This page contains a collection of previews of the games available for purchase, each of which consists of a thumbnail image, title, rating, and price.
+Clicking on a preview takes the user to the details page of the selected game where they add the product to the cart.
+In order to optimize screen space, previews are displayed 3 to a row on laptop, 2 to a row on tablet and 1 on top of each other on mobile screens.
+
+#### Details Page
+- _Game Details_: This section shows all relevant information about the selected game plus a large "Add to Cart" button. It's possible to add more than one object at the time using quantity selector near the button.
+- _Similar Games_: Scrolling down the game details, there is a list of games belonging to the same category as the selected game, use the same product page template that the user is familiar with. The purpose of this feature is to show the user games similar to the one selected if they are not convinced of the purchase of the first one.
+-_Cart Preview_: If the user decides to add the product to the cart, a Toast message appears at the top right of the screen showing the preview of the items in the cart with a button to go directly to the checkout page.
+
+
+#### Cart
+- _Cart Contents_: Here the user can change the quantity of the items in the cart or remove them completely, alternatively they can click on the thumbnail image to return to the game details page.
+- _Checkout Button_: The only large button on the page takes the user to the checkout phase. Although it is still possible to go back to the site (for example by clicking on the logo) the most obvious action is to continue to checkout.
+
+#### Checkout Page
+- _Checkout form_: This is where the user's shipping information is entered, which can also be saved to speed up future purchases.  
+- _Navigation Buttons_: They allow the user to complete the purchase or return to the cart.
+- _Confiramation emails_: The site sends users two types of confirmation emails: when they register for an account and when they complete a purchase.
+
+#### Account Section
+- _Personal Information_: Contains a form with which is possible to update the user's shipping information entered in the checkout phase. Uses the same template as the checkout form with which the user is familiar.
+- _User History_: Contains a list with the orders placed by the user. In order to optimize space, the purchased items are shown only by clicking on the orders. 
+
+#### Footer
+- _Social Media Icons_: At present, the purpose of this site is purely demonstrative and therefore the icons lead to the home page of the relevant social media, however, if in the future the site should become a real eCommerce app, these will lead to the social media pages of The Yellow Dice.
+
+#### Return to Top buttons
+Appears as soon as the user starts to scroll down. Clicking this button returns the user at the the top of the page.
+
+### Features Left to Implement
+
+#### Ranting system
+A feature commonly used by Amazon and many other sites which guide the users in choosing the product to buy. The stars used in the current version are a placeholder.
+
+#### Social login
+Can be implemented with Alluath and allows and greatly increase the chance of the user signing up to the site.
+
+#### Wishlist
+Can be handled by a Django model containing the object: user_id, product_id. This feature can increase the chance of wishlisted products being sold in the future and can help the business owner to anticipate stock levels.
 
 ### Existing Features
 
@@ -265,19 +323,19 @@ To deploy the project on Heroku, take the following steps:
 
 5. From the heroku dashboard of your newly created application, click on **Settings** -> **Reveal Config Vars** and set as the following:
 
-| KEY                    | VALUE                                                                 |
-|------------------------|-----------------------------------------------------------------------|
-| AWS_ACCESS_KEY_ID      | <Same as the AWS .csv file>                                           |
-| AWS_SECRET_ACCESS_KEY  | <Same as the AWS .csv file>                                           |
-| DATABASE_URL           | <Automatically set by Heroku>                                         |
-| DISABLE_COLLECTSTATIC  | 1                                                                     |
-| EMAIL_HOST_PASS        | <The 16 character gmail password for apps>                            |
-| EMAIL_HOST_USER        | <The new gmail address>                                               |
-| SECRET_KEY             | <Your Django secret key>                                              |
-| STRIPE_PUBLISHABLE_KEY | <Same as your env.py>                                                 |
-| STRIPE_SECRET_KEY      | <Same as your env.py>                                                 |
-| USE_AWS                | True                                                                  |
-| DEVELOPMENT            | <Optional, without this variable, each error will return a 404 page.> |
+| KEY                    | VALUE                                                               |
+|------------------------|---------------------------------------------------------------------|
+| AWS_ACCESS_KEY_ID      | Same as the AWS .csv file                                           |
+| AWS_SECRET_ACCESS_KEY  | Same as the AWS .csv file                                           |
+| DATABASE_URL           | Automatically set by Heroku                                         |
+| DISABLE_COLLECTSTATIC  | 1                                                                   |
+| EMAIL_HOST_PASS        | The 16 character gmail password for apps                            |
+| EMAIL_HOST_USER        | The new gmail address                                               |
+| SECRET_KEY             | Your Django secret key                                              |
+| STRIPE_PUBLISHABLE_KEY | Same as your env.py                                                 |
+| STRIPE_SECRET_KEY      | Same as your env.py                                                 |
+| USE_AWS                | True                                                                |
+| DEVELOPMENT            | Optional, without this variable, each error will return a 404 page. |
 
 
 10. Migrate the database models in your new database.
