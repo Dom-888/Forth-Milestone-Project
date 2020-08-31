@@ -101,7 +101,6 @@ All icons are from [Feather Icons](https://feathericons.com/).  
   
 The wireframes were created using [Figma](https://www.figma.com/) and can be found [here](https://www.figma.com/file/c22Y7U3hy37bp4gazuvnpb/Forth-Milestone-Project?node-id=0%3A1.)
 
-
 ## Features
 
 ### Existing Features  
@@ -393,19 +392,19 @@ To deploy the project on Heroku, take the following steps:
 
 5. From the heroku dashboard of your newly created application, click on **Settings** -> **Reveal Config Vars** and set as the following:
 
-| KEY                    | VALUE                                                               |
-|------------------------|---------------------------------------------------------------------|
-| AWS_ACCESS_KEY_ID      | Same as the AWS .csv file                                           |
-| AWS_SECRET_ACCESS_KEY  | Same as the AWS .csv file                                           |
-| DATABASE_URL           | Automatically set by Heroku                                         |
-| DISABLE_COLLECTSTATIC  | 1                                                                   |
-| EMAIL_HOST_PASS        | The 16 character gmail password for apps                            |
-| EMAIL_HOST_USER        | The new gmail address                                               |
-| SECRET_KEY             | Your Django secret key                                              |
-| STRIPE_PUBLISHABLE_KEY | Same as your env.py                                                 |
-| STRIPE_SECRET_KEY      | Same as your env.py                                                 |
-| USE_AWS                | True                                                                |
-| DEVELOPMENT            | Optional, without this variable, each error will return a 404 page. |
+| KEY                    | VALUE                                                                       |
+|------------------------|-----------------------------------------------------------------------------|
+| AWS_ACCESS_KEY_ID      | &lt;Same as the AWS .csv file&gt;                                           |
+| AWS_SECRET_ACCESS_KEY  | &lt;Same as the AWS .csv file&gt;                                           |
+| DATABASE_URL           | &lt;Automatically set by Heroku&gt;                                         |
+| DISABLE_COLLECTSTATIC  | 1                                                                           |
+| EMAIL_HOST_PASS        | &lt;The 16 character gmail password for apps  &nbsp; &gt;                   |
+| EMAIL_HOST_USER        | &lt;The new gmail address  &nbsp; &gt;                                      |
+| SECRET_KEY             | &lt;Your Django secret key &gt;                                             |
+| STRIPE_PUBLISHABLE_KEY | &lt;Same as your env.py&gt;                                                 |
+| STRIPE_SECRET_KEY      | &lt;Same as your env.py&gt;                                                 |
+| USE_AWS                | True                                                                        |
+| DEVELOPMENT            | &lt;Optional, without this variable, each error will return a 404 page.&gt; |
 
 
 10. Migrate the database models in your new database.
