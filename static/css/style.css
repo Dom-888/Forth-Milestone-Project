@@ -267,11 +267,11 @@ main {
 /* -------- Order History --------- */
 
 .user-order {
-    color: #000;
+    color: #000 !important;
 }
 
 .user-order:hover {
-    color: inherit;
+    color: inherit !important;
 }
 
 /* ------------ Footer ------------ */
