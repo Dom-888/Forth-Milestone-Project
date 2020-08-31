@@ -71,7 +71,7 @@ The site uses light, pastel colors with good contrast between them.
 - _Sky Blue (#1F96F4)_: Used for the navbar, footer, and logo background, it was chosen to create a nice contrast with the yellow of the logo.
 - _Light Gray (#E5E5E5)_: Used for the site background.
 - _Dark Gray (#99999)_: Used for the placeholder text in forms and searchbar.  
-- _Bootstrap Green (#5cb85c)_: Used for most of the buttons on the site
+- _Bootstrap Green (#5cb85c)_: Used for most of the buttons on the site.
 - _Bootstrap Red (#d9534f)_: Used for the "remove from cart" buttons.
 
 #### Icons  
@@ -146,8 +146,7 @@ The wireframes were created using [Figma](https://www.figma.com/) and can be fou
 ### Tested Devices  
 The website has been successfully tested with the following devices, plus all those simulated by the [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools).    
   
-```  
-| -----------|---------------------------- |------------------------------|  
+
 | Type       | Device                      | Browsers                     |  
 | -----------|---------------------------- |------------------------------|  
 | Laptop     | Asus FX753VD                | Chrome, Firefox, Edge, Opera |  
@@ -156,9 +155,8 @@ The website has been successfully tested with the following devices, plus all th
 | Smartphone | Samsung Galaxy s9           | Chrome                       |  
 | Smartphone | Samsung Galaxy a50          | Firefox Focus                |  
 | Smartphone | Asus ZenFone 4 max          | Chrome                       |  
-| Smartphone | Apple iPhone 7              | Safari                       |  
-| -----------|---------------------------- |------------------------------|  
-```  
+| Smartphone | Apple iPhone 7              | Safari                       |   
+
   
 ### Manual Testing
   

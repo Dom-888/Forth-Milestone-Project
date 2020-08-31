@@ -77,13 +77,13 @@
     </div>
 
     <div>
-        <a href="{% url 'checkout' %}" type="button" id="checkout" class="btn btn-success btn-rounded btn-lg px-4">Checkout</a>
+        <a href="{% url 'checkout' %}" type="button" id="checkout" class="btn btn-success btn-rounded btn-lg px-4 mb-3">Checkout</a>
     </div>
 
 
     {% else %}
     <h4 class="mb-5 section-header">Your cart is empty, sad and lonely :(</h4>
-    <a href="{% url 'games'%}" type="button" id="viewAllGames" class="btn btn-success btn-rounded btn-lg px-4">View
+    <a href="{% url 'games'%}" type="button" id="viewAllGames" class="btn btn-success btn-rounded btn-lg px-4 mb-3">View
         All Games</a>
     {% endif %}
 
