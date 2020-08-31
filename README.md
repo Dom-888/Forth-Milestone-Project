@@ -57,6 +57,23 @@ An eCommerce website for tabletop games, made with Django
 
 ### User Stories
 
+- I'm a tabletop games enthusiast looking to expand my collection,
+I already know all the most popular games and I am looking for a site with a large selection and that is up to date on the latest news.
+In the _The Yellow Dice_ I have the ability to search for a specific game mechanic and I can see the exact contents of the game box before completing a purchase.
+I generally use my PC to shop online, however I want to be able to browse new games anywhere with my phone.
+I will probably buy again in the future and therefore I want to record my shipping details to speed up future purchases.
+
+- I'm a casual gamer, I know the most popular tabletop games but I'm not an expert and I'm looking for something new to play.
+Browsing the Mashup section of the _The Yellow Dice_ I discover _Clue: The Office Edition_, which is perfect for me as I'm familiar with _Cluedo_'s gameplay mechanics and I love _The Office_ TV series.
+_The Yellow Dice_ allows me to complete the purchase without having to register an account as it is unlikely that I will purchase another game in the short term.
+
+- I'm looking for a gift to buy for my grandchildren but I'm not a tech-savvy person and I need a simple site to use.
+After landing on The Yellow Dice, the Site introduction confirms my idea that a tabletop game is the right choice.
+The text is bigger than the average with a clear font and a good contrast with the background making it very easy to read.
+After choosing the game, a pop-out message guides me to the checkout page,
+Here the buying process is simple and straightforward: there are no distracting elements on the page, I just have to fill the form and click on the large "Buy" Button.
+Finally, a confirmation email assures me that the purchase was successful.
+
 ### Design Choices
 
 #### Fonts  
@@ -159,7 +176,7 @@ The website has been successfully tested with the following devices, plus all th
 
 ### Simulated Devices
 
-[BrowserStack](https://www.browserstack.com/): was used to test the website on the following simulated devices:
+[BrowserStack](https://www.browserstack.com/) was used to test the website on the following simulated devices:
 
 | Type       | Device                      | Browsers |       
 | -----------|---------------------------- |----------|  
