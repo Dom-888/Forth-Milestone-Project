@@ -66,35 +66,3 @@ def game_details(request, game_pk):
     }
 
     return render(request, 'games/game_details.html', context)
-
-
-"""
----------- Shop owner section ----------
-The following functions allow the store
-owner to modify the game inventory.
-
-"""
-
-# Add a new game to the inventory
-# @login_required 
-def add_game(request): 
-        
-    game_form = GameForm()
-    included_form = IncludedForm()
-    template = 'games/add_game.html'
-    context = {
-        'game_form': game_form,
-        'included_form': included_form,
-    }
-
-    return render(request, template, context)    
-
-
-# Edit an existing game to the inventory
-# @login_required
-# def edit_game(request):
-
-
-# Delete an existing game to the inventory
-# @login_required
-# def delete_game(request):
