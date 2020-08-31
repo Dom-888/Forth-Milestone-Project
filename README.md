@@ -243,7 +243,7 @@ The website has been successfully tested with the following devices, plus all th
 
 #### Navbar
 
-- Hover over each link in the navbar to confirm that the color change as expected.
+- Hover over each link in the navbar to confirm that the color changes as expected.
 - Click the categories link in the navbar, confirm that all categories are displayed in the dropdown menu.
 - Clicked each other link in the navbar to confirm that it leads to the correct page.
 - Confirm that when logged out the options "Sign Up" and "Log In" are visible and that "Account", "Inventory" and "Log out" are not.
@@ -424,7 +424,7 @@ To deploy the project on Heroku, take the following steps:
 
 ### Media
 
-- The pictures used in the carousel are from [Pinterest](https://www.pinterest.it/)
+- The pictures used in the carousel are from [Pinterest](https://www.pinterest.it/).
 - The pictures used in the products are from [Amazon](https://www.amazon.com/) and [BoardGamer.ie](https://www.boardgamer.ie/). 
 
 ### Acknowledgments
