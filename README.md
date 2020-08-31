@@ -24,9 +24,6 @@ A live preview of the the website can be found [here](https://the-yellow-dice.he
     - [**Simulated Devices**](#simulated-devices)
     - [**Manual Testing**](#manual-testing)
     - [**Validation Services**](#validation-services)
-    - [**Bugs Discovered**](#bugs-discovered)
-
-
 
 6. [**Deployment**](#deployment)
     - [**How to run this project locally**](#how-to-run-this-project-locally)
@@ -134,9 +131,8 @@ In order to optimize screen space, previews are displayed 3 to a row on laptop, 
 - _Similar Games_: Scrolling down the game details, there is a list of games belonging to the same category as the selected game, use the same product page template that the user is familiar with. The purpose of this feature is to show the user games similar to the one selected if they are not convinced of the purchase of the first one.
 -_Cart Preview_: If the user decides to add the product to the cart, a Toast message appears at the top right of the screen showing the preview of the items in the cart with a button to go directly to the checkout page.
 
-
 #### Cart
-- _Cart Contents_: Here the user can change the quantity of the items in the cart or remove them completely, alternatively they can click on the thumbnail image to return to the game details page.
+- _Cart Contents_: Here the user can change the quantity of the items in the cart or remove them completely, alternatively they can click on the item thumbnail image to return to the game details page.
 - _Checkout Button_: The only large button on the page takes the user to the checkout phase. Although it is still possible to go back to the site (for example by clicking on the logo) the most obvious action is to continue to checkout.
 
 #### Checkout Page
@@ -156,7 +152,7 @@ Appears as soon as the user starts to scroll down. Clicking this button returns 
 
 ### Features Left to Implement
 
-#### Ranting system
+#### Rating system
 A feature commonly used by Amazon and many other sites which guide the users in choosing the product to buy. The stars used in the current version are a placeholder.
 
 #### Social login
@@ -318,9 +314,12 @@ The website has been successfully tested with the following devices, plus all th
 - Click on "All Games" button, confirm it takes the user to the games pages and that here all the games are displayed.
 - Click on "Personal Information" button, confirm it takes the user to the Personal Information Page.
   
-### Validation services  
-  
-### Bugs Discovered  
+### Validation Services  
+The following validation services were used to check the validity of the website code.  
+- [HTML Validator](https://validator.w3.org/) was used to test the HTML code.  
+- [CSS Validator](https://jigsaw.w3.org/css-validator/) was used to test the CSS code.  
+- [JSHint](https://jshint.com/) was used to test the JavaScript code.  
+- [Python syntax checker](https://extendsclass.com/python-tester.html) was used to test the Python code.
 
 ## Deployment
 
@@ -427,5 +426,6 @@ To deploy the project on Heroku, take the following steps:
 
 <br>  
   
-#### Disclaimer  
-  
+## Disclaimer
+
+The content of this website is provided for educational purposes only.
