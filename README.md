@@ -1,8 +1,8 @@
-# -> Heroku link here <-
+# [The Yellow Dice](https://the-yellow-dice.herokuapp.com/)
 
 An ecommerce website that sells tapletop games made with Django
 
-# -> Image here <-
+!["Responsive Representation"](static/images/misc/responsive-representation.png "Responsive Representation")
 
 ## Table of Contents
 1. [**UX**](#ux)
